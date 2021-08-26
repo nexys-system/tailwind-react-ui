@@ -1,12 +1,11 @@
 {
   "name": "@nexys/tailwind-react-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/*"
   ],
-  "dependencies": {},
   "scripts": {
     "start": "SNOWPACK_PUBLIC_URL= snowpack dev",
     "buildAll": "SNOWPACK_PUBLIC_URL= yarn css; yarn build; bash ./replace_path.sh",
