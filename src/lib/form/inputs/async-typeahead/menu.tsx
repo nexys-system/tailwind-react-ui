@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 // import Input from "../text";
 
-import MenuWrapper from "common/components/popup-menu";
+import MenuWrapper from "../../../components/popup-menu";
 import MenuItem from "./menu-item";
 
 type Value = { id: number | string; name: string };

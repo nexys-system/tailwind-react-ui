@@ -5,8 +5,8 @@ import * as T from "../type";
 import * as V from "@nexys/validation";
 import * as U from "../utils";
 
-import Button from "common/components/button";
-import Spinner from "common/components/spinner2";
+import Button from "../../../components/button";
+import Spinner from "../../../components/spinner2";
 
 import Generator from "./generator";
 

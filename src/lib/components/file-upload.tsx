@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Spinner from "common/components/spinner2";
-import Chevron from "common/icons/chevron-up";
+import Spinner from "./spinner2";
+import Chevron from "../icons/chevron-up";
 
 export default ({ promise }: { promise: any }) => {
   const [loading, setLoading] = useState<boolean>(false);

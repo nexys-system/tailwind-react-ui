@@ -1,5 +1,5 @@
 import React from "react";
-import Chevron from "common/icons/chevron-down";
+import Chevron from "../icons/chevron-down";
 
 export default (props: {
   up: boolean;

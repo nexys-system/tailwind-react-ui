@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import Chevron from "common/components/chevron";
 import Input from "../text";
 
-import MenuWrapper from "common/components/popup-menu";
+import MenuWrapper from "../../../components/popup-menu";
 import MenuItem from "./menu-item";
 
 export default <A extends number | string | undefined>(props: {

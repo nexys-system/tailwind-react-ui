@@ -2,7 +2,6 @@ import React from "react";
 // import { Chip, Tooltip } from '@material-ui/core';
 
 import NUtils from "@nexys/utils";
-import Chip from "common/components/pill";
 
 interface Props {
   file: File;

@@ -1,6 +1,5 @@
 import React from "react";
-import Close from "common/icons/close";
-import { mapTypeToColor } from "../utils";
+import Close from "../../icons/close";
 
 export interface BannerProps {
   label: string;

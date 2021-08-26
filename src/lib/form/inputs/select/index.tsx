@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as T from "../../type";
-import Chevron from "common/components/chevron";
+import Chevron from "../../../components/chevron";
 import BaseInput from "../base";
 
 import Menu from "./menu";

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-import Close from "common/icons/close";
-import Edit from "common/icons/edit";
+import Close from "../../../icons/close";
+import Edit from "../../../icons/edit";
 
 import Form from "../form";
 
