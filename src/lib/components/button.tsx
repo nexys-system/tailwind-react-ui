@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppContext } from "interface/store/context";
+import { AppContext } from "../interface/store/context";
 import Spinner from "./spinner2";
 
 interface Props {

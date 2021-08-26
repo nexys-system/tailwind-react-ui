@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "declaration": true,
+    "baseUrl": "src/lib",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -17,8 +18,8 @@
     "noEmit": false,
     "jsx": "react"
   },
-  "include": ["./src/**/*"],
-  "exclude": ["./src/**/*.test.ts"],
+  "include": ["./src/lib/**/*"],
+  "exclude": ["./src/lib/**/*.test.ts"],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
