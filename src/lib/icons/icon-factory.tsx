@@ -14,7 +14,7 @@ const IconFactorySVG =
           strokeLinecap={strokeLinecap}
           strokeLinejoin={strokeLinejoin}
           strokeWidth={strokeWidth}
-          {...props}
+          {...svgProps}
           d={d}
         />
       </Wrapper>
