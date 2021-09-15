@@ -7,13 +7,14 @@ import Wrapper from "./svg-wrapper";
 
 const IconFactorySVG =
   (d: string, strokeWidth: number = 2, strokeLinecap:string = "round", strokeLinejoin:string = "round") =>
-  ({ className }: { className?: string }) =>
+  ({ className, svgProps }: { className?: string, svgProps?: React.SVGAttributes<any> }) =>
     (
       <Wrapper className={className}>
         <path
           strokeLinecap={strokeLinecap}
           strokeLinejoin={strokeLinejoin}
           strokeWidth={strokeWidth}
+          {...props}
           d={d}
         />
       </Wrapper>
