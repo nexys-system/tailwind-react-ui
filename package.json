@@ -1,6 +1,6 @@
 {
   "name": "@nexys/tailwind-react-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -15,7 +15,6 @@
   },
   "peerDependencies": {
     "@headlessui/react": "^1.4.0",
-    "@heroicons/react": "^1.0.3",
     "@nexys/core-list": "^0.0.5",
     "@nexys/validation": "^2.1.0",
     "@types/react": "^17.0.3",
@@ -28,7 +27,6 @@
   },
   "devDependencies": {
     "@headlessui/react": "^1.4.0",
-    "@heroicons/react": "^1.0.3",
     "@nexys/core-list": "^0.0.5",
     "@nexys/validation": "^2.1.0",
     "@snowpack/plugin-build-script": "^2.1.0",
