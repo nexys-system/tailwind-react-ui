@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import * as T from "../../type";
 // import * as UIUtils from "./ui-utils";
 import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
+import CheckIcon from "../../../icons/check";
+import SelectorIcon from "../../../icons/selector";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
