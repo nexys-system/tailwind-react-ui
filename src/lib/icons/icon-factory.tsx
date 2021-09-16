@@ -1,27 +1,19 @@
 import React from "react";
 
 import Wrapper from "./svg-wrapper";
-
-// add React.SVGAttributes ?
-// see https://github.com/DefinitelyTyped/DefinitelyTyped/blob/1349b640d4d07f40aa7c1c6931f18e3fbf667f3a/types/react/index.d.ts#L2341
-
-type StrokeLinecap = "inherit" | "round" | "butt" | "square" | undefined;
-type StrokeLinejoin = "inherit" | "round" | "miter" | "bevel" | undefined;
+import * as T from "./type";
 
 const IconFactorySVG =
   (
     d: string,
     strokeWidth: number,
-    strokeLinecap: StrokeLinecap = "round",
-    strokeLinejoin: StrokeLinejoin = "round"
+    strokeLinecap: T.StrokeLinecap = "round",
+    strokeLinejoin: T.StrokeLinejoin = "round"
   ) =>
   ({
     className,
     svgProps,
-  }: {
-    className?: string;
-    svgProps?: React.SVGAttributes<any>;
-  }) =>
+  }: T.IconProps) =>
     (
       <Wrapper className={className}>
         <path
