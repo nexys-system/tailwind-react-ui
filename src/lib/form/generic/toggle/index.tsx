@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-import Close from "../../../icons/close";
-import Edit from "../../../icons/edit";
+import { Close, Edit } from "../../../icons";
 
 import Form from "../form";
 

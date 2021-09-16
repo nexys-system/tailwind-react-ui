@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Spinner from "./spinner2";
-import Chevron from "../icons/chevron-up";
+import { ChevronUp } from "../icons";
 
 export default ({ promise }: { promise: any }) => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -39,7 +39,7 @@ export default ({ promise }: { promise: any }) => {
         </>
       ) : (
         <>
-          <Chevron />{" "}
+          <ChevronUp />{" "}
           <span className="mt-2 text-base leading-normal">Select a file</span>
           <input type="file" className="hidden" onChange={handleChange} />
         </>

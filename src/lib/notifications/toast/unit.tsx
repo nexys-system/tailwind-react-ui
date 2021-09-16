@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { ToastProp } from "../type";
-import Close from "../../icons/close";
+import { Close } from "../../icons";
 import { mapTypeToColor } from "../utils";
 
 const ToastUnit = ({

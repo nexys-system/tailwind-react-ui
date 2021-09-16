@@ -1,5 +1,5 @@
 import React from "react";
-import Chevron from "../icons/chevron-down";
+import { ChevronDown } from "../icons";
 
 export default (props: {
   up: boolean;
@@ -14,7 +14,7 @@ export default (props: {
     endAngle > 0 ? `rotate-${endAngle}` : `-rotate-${endAngle * -1}`;
   return (
     <span>
-      <Chevron
+      <ChevronDown
         className={`transition duration-500 ease-in-out transform ${
           up ? rotateTo : rotateFrom
         }`}

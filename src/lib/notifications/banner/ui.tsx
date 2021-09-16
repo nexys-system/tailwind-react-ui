@@ -1,5 +1,5 @@
 import React from "react";
-import Close from "../../icons/close";
+import { Close } from "../../icons";
 
 export interface BannerProps {
   label: string;
