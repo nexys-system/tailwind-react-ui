@@ -8,22 +8,24 @@ export default ({
   label: string;
 }) => {
   return (
-    <span className="relative ">
-      <span className="group cursor-pointer relative inline-block text-center">
-        {children}
-        <span className="mb-3 whitespace-normal text-black opacity-0 w-32 bg-white dark:bg-coolGray-500 shadow-md dark:text-white text-center text-xs rounded-lg py-2 absolute left-10 z-20 group-hover:opacity-100 bottom-full  ml-14 px-3 pointer-events-none">
-          {label}
-          <svg
-            className="absolute text-white dark:text-coolGray-500 h-2 w-full left-10 top-full"
-            x="0px"
-            y="0px"
-            viewBox="0 0 255 255"
-            xmlSpace="preserve"
-          >
-            <polygon className="fill-current" points="0,0 127.5,127.5 255,0" />
-          </svg>
-        </span>
-      </span>
-    </span>
+    <div className="group inline-block relative">
+      <div className="group-hover:opacity-100 opacity-0 transition ease-in-out duration-300 absolute z-10 w-36 text-center bottom-full left-1/2 transform -translate-x-1/2">
+        <div className="relative mx-2">
+          <div className="bg-coolGray-700 text-white text-xs rounded py-1 px-4 right-0 bottom-full">
+            {label}
+            <svg
+              className="absolute h-3 w-full bottom-15 left-0 top-full"
+              viewBox="0 0 255 255"
+            >
+              <polygon
+                points="0,0 127.5,127.5 255,0"
+                className="fill-current text-coolGray-700"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      {children}
+    </div>
   );
 };

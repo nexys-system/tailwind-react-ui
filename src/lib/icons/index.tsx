@@ -1,5 +1,14 @@
 import IconFactorySVG from "./icon-factory";
 
+export const CheckCircle = IconFactorySVG(
+  "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+  2
+);
+export const Circle = IconFactorySVG("M21 12a9 9 0 11-18 0 9 9 0 0118 0z", 2);
+export const Clipboard = IconFactorySVG(
+  "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+  2
+);
 export const CloudDownload = IconFactorySVG(
   "M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10",
   2
@@ -21,6 +30,10 @@ export const ChevronLeft = IconFactorySVG("M15 19l-7-7 7-7", 1);
 export const ChevronRight = IconFactorySVG("M9 5l7 7-7 7", 1);
 export const ChevronUp = IconFactorySVG("M5 15l7-7 7 7", 1);
 export const Close = IconFactorySVG("M6 18L18 6M6 6l12 12", 1);
+export const DesktopComputer = IconFactorySVG(
+  "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+  2
+);
 export const DoubleChevronLeft = IconFactorySVG(
   "M11 19l-7-7 7-7m8 14l-7-7 7-7",
   1
@@ -70,6 +83,10 @@ export const Qr = IconFactorySVG(
   "M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z",
   1
 );
+export const QuestionCircle = IconFactorySVG(
+  "M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  2
+);
 export const Search = IconFactorySVG(
   "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
   1
@@ -82,6 +99,10 @@ export const Study = IconFactorySVG(
 export const Sun = IconFactorySVG(
   "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
   1
+);
+export const Tag = IconFactorySVG(
+  "M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z",
+  2
 );
 export const User = IconFactorySVG(
   "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
