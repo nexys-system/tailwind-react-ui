@@ -2,6 +2,7 @@ import AppTitle from "./app-title";
 import Button from "./button";
 import Card from "./card";
 import Chevron from "./chevron";
+import FileUpload from "./file-upload";
 import Pill from "./pill";
 import PopupMenu from "./popup-menu";
 import Preview from "./preview";
@@ -18,6 +19,7 @@ export {
   Button,
   Card,
   Chevron,
+  FileUpload,
   Pill,
   PopupMenu,
   Preview,
