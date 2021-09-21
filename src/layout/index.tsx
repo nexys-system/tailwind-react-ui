@@ -7,6 +7,10 @@ import { components, formComponents } from "../links";
 import Footer from "./footer";
 import Header from "./header";
 
+const nCols = 8;
+const leftNCols = 1;
+const rightNCols = nCols - leftNCols;
+
 export default ({ children }: { children: JSX.Element }) => {
   return (
     <div className="flex flex-col h-screen justify-between">
@@ -33,7 +37,7 @@ export default ({ children }: { children: JSX.Element }) => {
                 ))}
               </ul>
             </div>
-            <div className={"col-span-2"}>{children}</div>
+            <div className={"col-span-" + rightNCols}>{children}</div>
           </div>
         </div>
       </main>
