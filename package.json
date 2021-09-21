@@ -11,7 +11,7 @@
     "buildAll": "SNOWPACK_PUBLIC_URL= yarn css; yarn build; bash ./replace_path.sh",
     "build": "tsc",
     "test": "jest",
-    "css": "tailwindcss -o public/tailwind.css"
+    "css": "tailwindcss -o public/out.css"
   },
   "peerDependencies": {
     "@headlessui/react": "^1.4.0",
