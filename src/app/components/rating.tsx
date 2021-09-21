@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Rating from "../../lib/components/rating";
+import Rating from "../../lib/form/inputs/rating";
 export default () => {
   const [r, setR] = useState<1 | 2 | 3 | 4 | 5 | 0>(0);
   return (

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { AppContext } from "../interface/store/context";
-import Spinner from "./spinner2";
+import { AppContext } from "../context-provided/context";
+import Spinner from "./loader/circular";
 
 interface Props {
   id?: number | string;

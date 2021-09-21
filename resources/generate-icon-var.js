@@ -1,3 +1,4 @@
+// this file is used to generate the icon files from individual files. Not used in the package
 const fs = require("fs");
 
 function getFiles(dir, files_) {

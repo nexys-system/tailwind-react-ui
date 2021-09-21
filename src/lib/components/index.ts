@@ -1,3 +1,5 @@
+export * as Loader from "./loader";
+
 import AppTitle from "./app-title";
 import Button from "./button";
 import Card from "./card";
@@ -7,8 +9,6 @@ import Pill from "./pill";
 import PopupMenu from "./popup-menu";
 import Preview from "./preview";
 import ProgressBar from "./progress-bar";
-import Loader from "./spinner";
-import CircularLoader from "./spinner2";
 import ThemeToggle from "./theme-toggle";
 import Tooltip from "./tooltip";
 
@@ -22,8 +22,6 @@ export {
   PopupMenu,
   Preview,
   ProgressBar,
-  Loader,
-  CircularLoader,
   ThemeToggle,
   Tooltip,
 };
