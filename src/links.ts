@@ -7,6 +7,7 @@ import Pill from "./app/components/pill";
 import Spinner from "./app/components/spinners";
 import Icons from "./app/components/icons";
 import Table from "./app/components/table";
+import Code from "./app/components/code";
 
 import TextInput from "./app/form/text";
 import NumberInput from "./app/form/number";
@@ -36,6 +37,7 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Icons", link: "/icons", Component: Icons },
 
   { name: "Table", link: "/table", Component: Table },
+  { name: "Code", link: "/code", Component: Code },
 ];
 
 export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [

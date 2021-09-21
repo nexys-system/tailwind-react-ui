@@ -1,0 +1,53 @@
+import React from "react";
+
+import { Clipboard, CheckCircle } from "../../icons";
+
+enum CopyState {
+  idle = 1,
+  progress = 2,
+  copied = 3,
+}
+
+export const Statement = ({
+  code,
+  copyToClipboard = false,
+}: {
+  code: string;
+  copyToClipboard?: boolean;
+}): JSX.Element => {
+  const [copyState, setCopyState] = React.useState<CopyState>(CopyState.idle);
+
+  const handleClick = async () => {
+    setCopyState(CopyState.progress);
+    await navigator.clipboard.writeText(code);
+    setCopyState(CopyState.copied);
+  };
+
+  return (
+    <span
+      onClick={copyToClipboard ? handleClick : undefined}
+      className={
+        "cursor-pointer rounded p-1 px-3 text-sm text-gray-300 hover:text-white " +
+        (copyState === CopyState.progress ? "bg-yellow-500" : "bg-black")
+      }
+    >
+      <code>
+        {code}
+        &nbsp;
+      </code>
+
+      {copyToClipboard && (
+        <button
+          disabled={copyState === CopyState.progress}
+          className={"border-l-2 border-gray-700"}
+        >
+          {copyState !== CopyState.copied && <Clipboard />}
+
+          {copyState === CopyState.copied && (
+            <CheckCircle className={"text-green-500"} />
+          )}
+        </button>
+      )}
+    </span>
+  );
+};
