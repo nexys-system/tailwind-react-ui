@@ -7,6 +7,7 @@ import Pill from "./app/components/pill.js";
 import Spinner from "./app/components/spinners.js";
 import Icons from "./app/components/icons.js";
 import Table from "./app/components/table.js";
+import Code from "./app/components/code.js";
 import TextInput from "./app/form/text.js";
 import NumberInput from "./app/form/number.js";
 import BooleanInput from "./app/form/switch.js";
@@ -25,7 +26,8 @@ export const components = [
   {name: "Pill", link: "/pill", Component: Pill},
   {name: "Spinners", link: "/spinner", Component: Spinner},
   {name: "Icons", link: "/icons", Component: Icons},
-  {name: "Table", link: "/table", Component: Table}
+  {name: "Table", link: "/table", Component: Table},
+  {name: "Code", link: "/code", Component: Code}
 ];
 export const formComponents = [
   {name: "Text Input", link: "/text-input", Component: TextInput},
