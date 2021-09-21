@@ -12,7 +12,7 @@
     "build": "snowpack build",
     "buildWCSS": "yarn css; yarn build",
     "buildpackage": "tsc",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "css": "tailwindcss -o public/out.css"
   },
   "peerDependencies": {
