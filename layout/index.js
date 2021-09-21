@@ -3,6 +3,9 @@ import {Link} from "../_snowpack/pkg/react-router-dom.js";
 import {components, formComponents} from "../links.js";
 import Footer from "./footer.js";
 import Header from "./header.js";
+const nCols = 8;
+const leftNCols = 1;
+const rightNCols = nCols - leftNCols;
 export default ({children}) => {
   return /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-col h-screen justify-between"
@@ -29,6 +32,6 @@ export default ({children}) => {
   }, /* @__PURE__ */ React.createElement(Link, {
     to: c.link
   }, c.name))))), /* @__PURE__ */ React.createElement("div", {
-    className: "col-span-2"
+    className: "col-span-" + rightNCols
   }, children)))), /* @__PURE__ */ React.createElement(Footer, null));
 };
