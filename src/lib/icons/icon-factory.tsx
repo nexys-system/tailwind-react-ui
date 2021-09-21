@@ -11,20 +11,20 @@ const IconFactorySVG =
     strokeLinejoin: T.StrokeLinejoin = "round"
   ) =>
   ({ className, svgProps }: T.IconProps) => {
-    const p: string[] = typeof d === "string" ? [d] : d;
+    const paths: string[] = typeof d === "string" ? [d] : d;
+
     return (
       <Wrapper className={className}>
-        <>
-          {p.map((i) => (
-            <path
-              strokeLinecap={strokeLinecap}
-              strokeLinejoin={strokeLinejoin}
-              strokeWidth={strokeWidth}
-              {...svgProps}
-              d={i}
-            />
-          ))}
-        </>
+        {paths.map((d, i) => (
+          <path
+            key={i}
+            strokeLinecap={strokeLinecap}
+            strokeLinejoin={strokeLinejoin}
+            strokeWidth={strokeWidth}
+            {...svgProps}
+            d={d}
+          />
+        ))}
       </Wrapper>
     );
   };

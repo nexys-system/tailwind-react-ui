@@ -12,6 +12,7 @@ import TextInput from "./app/form/text";
 import NumberInput from "./app/form/number";
 import BooleanInput from "./app/form/switch";
 import SelectInput from "./app/form/select";
+import Checkbox from "./app/form/checkbox";
 import Rating from "./app/form/rating";
 
 interface MenuItem {
@@ -42,6 +43,7 @@ export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Number Input", link: "/number-input", Component: NumberInput },
   { name: "Select Input", link: "/select-input", Component: SelectInput },
   { name: "Switch", link: "/switch", Component: BooleanInput },
+  { name: "Checkbox", link: "/checkbox", Component: Checkbox },
   { name: "Rating", link: "/rating", Component: Rating },
 ];
 

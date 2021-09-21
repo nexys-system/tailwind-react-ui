@@ -1,24 +1,19 @@
 import React from "react";
+import { FormType, WrapperProps } from "./type";
 
 export const Wrapper = ({
   label,
   info,
   children,
   errors,
-  inputType = "default",
-}: {
-  label?: string;
-  info?: string;
-  children: JSX.Element | JSX.Element[];
-  errors?: string[];
-  inputType?: "default" | "switch";
-}) => {
+  inputType = FormType.Text,
+}: WrapperProps & { inputType?: FormType }) => {
   return (
     <div className={`controls my-3 `}>
-      <div className={`${inputType === "switch" && "flex"}`}>
+      <div className={`${inputType === FormType.Switch && "flex"}`}>
         <label
           className={`control-label dark:text-white font-extralight ${
-            inputType === "switch" && "mr-5"
+            inputType === FormType.Switch && "mr-5"
           }`}
         >
           {label}

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import * as T from "../../type";
 import Chevron from "../../../components/chevron";
-import BaseInput from "../base";
 
 import Menu from "./menu";
+import { getClasses } from "../utils";
 
 type Value = number | string | { id: number | string };
 
@@ -47,12 +47,12 @@ export const Select = <A extends Value>({
 
   return (
     <div className="relative">
-      <BaseInput
+      <input
         onChange={() => {}}
         onClick={() => setOpen(!open)}
         value={displayValue}
         disabled={disabled}
-        errors={errors}
+        className={getClasses(errors)}
       />
       <span className="absolute right-3 top-2">
         <Chevron up={!open} />
@@ -72,16 +72,3 @@ export const Select = <A extends Value>({
 };
 
 export default Select;
-
-/**
- * className={`cursor-pointer font-extralight  border rounded 
-        w-full px-3 py-1 pb-2 pr-2 focus focus:border-sky-500  dark:bg-coolGray-700  
-        focus:outline-none active:outline-none active:border-primary
-        transition ease-in-out duration-200
-        ${
-          errors && errors.length > 0
-            ? "border-rose-500"
-            : "border-coolGray-200 "
-        }
-        `}
- */

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as T from "../../type";
 
 import Menu from "./menu";
-import BaseInput from "../base";
+import { getClasses } from "../utils";
 
 type Value = { id: number | string; name: string };
 
@@ -32,13 +32,13 @@ export const Select = <A extends Value>({
 
   return (
     <div className="relative">
-      <BaseInput
+      <input
         onChange={handleSearch}
         onClick={() => setOpen(!open)}
         value={displayValue}
         disabled={disabled}
         placeholder={placeholder}
-        errors={errors}
+        className={getClasses(errors)}
       />
       {options && (
         <Menu

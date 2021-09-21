@@ -1,23 +1,21 @@
 import React from "react";
 import * as T from "../type";
-import BaseInput from "./base";
+import { getClasses } from "./utils";
 
-export const InputNumber = ({
+export const InputText = ({
   value,
   onChange,
-  errors,
   disabled,
   placeholder,
-  autoFocus,
-}: T.InputProps<number | undefined>) => {
+  errors,
+}: T.InputProps<number>) => {
   return (
-    <BaseInput
+    <input
+      className={getClasses(errors)}
       disabled={disabled}
-      type="text"
+      type="number"
       value={value || ""}
       placeholder={placeholder}
-      errors={errors}
-      autoFocus={autoFocus}
       onChange={(v) => {
         if (v.target.value === "") {
           return onChange(undefined);
@@ -34,4 +32,4 @@ export const InputNumber = ({
   );
 };
 
-export default InputNumber;
+export default InputText;

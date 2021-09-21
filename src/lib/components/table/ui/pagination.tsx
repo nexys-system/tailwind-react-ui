@@ -4,7 +4,7 @@ import * as CoreList from "@nexys/core-list";
 import { PaginationProps } from "@nexys/core-list/dist/list/ui-type";
 import {
   DoubleChevronLeft as ChevronLeftIcon,
-  DoubleChevronLeft as ChevronRightIcon,
+  DoubleChevronRight as ChevronRightIcon,
 } from "../../../icons";
 
 const { getPagination } = CoreList.PaginationUtils;
@@ -81,7 +81,12 @@ const Pagination = ({
         {pages.map((page, i) => {
           if (page === null) {
             return (
-              <a href="#" aria-current="page" className={classPageInactive}>
+              <a
+                key={i}
+                href="#"
+                aria-current="page"
+                className={classPageInactive}
+              >
                 ...
               </a>
             );

@@ -1,12 +1,3 @@
-export interface InputProps<A> {
-  onChange: (v: A | undefined) => void;
-  value?: A;
-  errors?: string[];
-  disabled?: boolean;
-  placeholder?: string;
-  autoFocus?: boolean;
-}
-
 // export interface SelectProps<A> extends InputProps<A> {
 //   options?: { id: number; name: string }[];
 // }
@@ -17,13 +8,6 @@ export interface AutocompleteProps<A>
   searchFunc: (searchString: string) => Promise<AutocompleteValue[]>;
   value?: AutocompleteValue;
   onChange: (v: AutocompleteValue) => void;
-}
-
-export interface SwitchProps {
-  value?: boolean;
-  disabled?: boolean;
-  onChange: (v: boolean) => void;
-  errors?: string[];
 }
 
 export interface OptionSet<A> {
@@ -42,6 +26,14 @@ export interface InputProps<A> {
   placeholder?: string;
 }
 
+export interface SelectProps<A> extends InputProps<A> {
+  options: OptionSet<A>[];
+}
+
+export interface SelectOptionSetProps<A> extends InputProps<OptionSet<A>> {
+  options: OptionSet<A>[];
+}
+
 /**
  * select props for dropdowns that return either a string or number (ie. enum)
  */
@@ -58,4 +50,25 @@ export interface SelectProps<A> extends InputProps<A> {
 
 export interface SelectOptionSetProps<A> extends InputProps<OptionSet<A>> {
   options: OptionSet<A>[];
+}
+
+///
+
+export type FormOptions<Id> = OptionSet<Id>[];
+
+export type FormOptionsMap<A> = Map<keyof A, FormOptions<number | string>>;
+
+export interface WrapperProps {
+  label?: string;
+  info?: string;
+  children: JSX.Element | JSX.Element[];
+  errors?: string[];
+}
+
+export enum FormType {
+  Number,
+  Text,
+  Select,
+  SelectObject,
+  Switch,
 }

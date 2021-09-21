@@ -1,24 +1,21 @@
 import React from "react";
 import * as T from "../type";
-
-import BaseInput from "./base";
+import { getClasses } from "./utils";
 
 export const InputText = ({
   value,
   onChange,
-  errors,
   disabled,
   placeholder,
-  autoFocus = false,
+  errors,
 }: T.InputProps<string>) => {
   return (
-    <BaseInput
+    <input
+      className={getClasses(errors)}
       disabled={disabled}
       type="text"
       value={value || ""}
       placeholder={placeholder}
-      errors={errors}
-      autoFocus={autoFocus}
       onChange={(v) =>
         v.target.value === "" ? onChange(undefined) : onChange(v.target.value)
       }

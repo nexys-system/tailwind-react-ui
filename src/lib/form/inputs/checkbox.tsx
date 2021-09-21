@@ -1,7 +1,7 @@
 import React from "react";
 import * as T from "../type";
 
-export default ({ value, disabled, onChange }: T.SwitchProps) => {
+export default ({ value, disabled, onChange }: T.InputProps<boolean>) => {
   const classes = [
     "relative block w-12 h-6 rounded-full bg-white dark:bg-coolGray-500 appearance-none cursor-pointer ",
   ];
@@ -24,9 +24,10 @@ export default ({ value, disabled, onChange }: T.SwitchProps) => {
     <>
       <label className="inline-flex items-center cursor-pointer ">
         <input
+          disabled={disabled}
           type="checkbox"
           className="form-checkbox w-5 h-5 text-sky-500 dark:bg-coolGray-700 focus:outline-none focus:shadow-none cursor-pointer"
-          checked={value}
+          checked={value === undefined ? false : value}
           onChange={() => onChange(!value)}
         />
       </label>
