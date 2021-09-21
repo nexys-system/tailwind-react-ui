@@ -28,3 +28,6 @@ export const useWindowDimensions = () => {
 
   return windowDimensions;
 };
+
+export const classNames = (...classes: string[]) =>
+  classes.filter(Boolean).join(" ");

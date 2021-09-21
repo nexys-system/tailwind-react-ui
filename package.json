@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "start": "SNOWPACK_PUBLIC_URL= snowpack dev",
-    "buildAll": "SNOWPACK_PUBLIC_URL= yarn css; yarn build; bash ./replace_path.sh",
-    "build": "tsc",
+    "build": "yarn css; snowpack build",
+    "buildpackage": "tsc",
     "test": "jest",
     "css": "tailwindcss -o public/out.css"
   },

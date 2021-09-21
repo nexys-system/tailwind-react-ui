@@ -6,6 +6,7 @@ module.exports = {
     public: "./src/public",
     common: "./src/common",
     config: "./src/config",
+    lib: "./src/lib",
   },
   mount: {
     public: { url: "/", static: true },

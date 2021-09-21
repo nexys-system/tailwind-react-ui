@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import { links } from "./links";
+import { links, components } from "./links";
 import Home from "./app/home";
 
 const NotFound = () => (
@@ -14,7 +14,9 @@ export default () => {
   return (
     <Switch>
       <Route exact path={links.home.link} component={Home} />
-      \
+      {components.map(({ link, Component }) => (
+        <Route exact path={link} component={Component} />
+      ))}
       <Route component={NotFound} />
     </Switch>
   );
