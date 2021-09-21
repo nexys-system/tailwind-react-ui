@@ -7,8 +7,6 @@ import Pill from "./pill";
 import PopupMenu from "./popup-menu";
 import Preview from "./preview";
 import ProgressBar from "./progress-bar";
-import RadioButton from "./radio";
-import Rating from "./rating";
 import Loader from "./spinner";
 import CircularLoader from "./spinner2";
 import ThemeToggle from "./theme-toggle";
@@ -24,8 +22,6 @@ export {
   PopupMenu,
   Preview,
   ProgressBar,
-  RadioButton,
-  Rating,
   Loader,
   CircularLoader,
   ThemeToggle,
