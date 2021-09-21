@@ -28,7 +28,7 @@ export default ({ value, disabled, onChange }: T.SwitchProps) => {
           type="checkbox"
           name="toggle"
           id="toggle"
-          checked={value}
+          checked={typeof value === "undefined" ? false : value}
           onChange={() => onChange(!value)}
           className={classes.join(" ")}
         />

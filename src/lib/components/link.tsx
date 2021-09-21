@@ -3,11 +3,17 @@ import React from "react";
 const AHref = ({
   link,
   children,
+  target,
 }: {
   link: string;
   children: string | JSX.Element;
+  target?: React.HTMLAttributeAnchorTarget;
 }) => (
-  <a className={"text-blue-500 hover:text-blue-800"} href={link}>
+  <a
+    target={target}
+    className={"text-blue-500 hover:text-blue-800"}
+    href={link}
+  >
     {children}
   </a>
 );

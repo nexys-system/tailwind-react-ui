@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import { components } from "../links";
+import { components, formComponents } from "../links";
 
 import Footer from "./footer";
 import Header from "./header";
@@ -16,9 +16,18 @@ export default ({ children }: { children: JSX.Element }) => {
         <div className="container mx-auto px-4 py-4">
           <div className={"grid grid-cols-8 gap-4"}>
             <div>
+              <h3 className={"ph-1 text-xl"}>Components</h3>
               <ul>
-                {components.map((c) => (
-                  <li className="text-blue-500 hover:text-blue-800">
+                {components.map((c, i) => (
+                  <li key={i} className="text-blue-500 hover:text-blue-800">
+                    <Link to={c.link}>{c.name}</Link>
+                  </li>
+                ))}
+              </ul>
+              <h3 className={"ph-1 text-xl"}>Form</h3>
+              <ul>
+                {formComponents.map((c, i) => (
+                  <li key={i} className="text-blue-500 hover:text-blue-800">
                     <Link to={c.link}>{c.name}</Link>
                   </li>
                 ))}
