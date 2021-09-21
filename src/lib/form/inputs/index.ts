@@ -6,4 +6,6 @@ import Number from "./number";
 import Rating from "./rating";
 import Radio from "./radio";
 
-export { Text, Number, Rating, Radio };
+import AsyncTypeahead from "./async-typeahead";
+
+export { Text, Number, Rating, Radio, AsyncTypeahead };
