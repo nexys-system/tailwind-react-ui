@@ -8,43 +8,30 @@ export const InputNumber = ({
   errors,
   disabled,
   placeholder,
-  autoFocus = false,
+  autoFocus,
 }: T.InputProps<number | undefined>) => {
   return (
     <BaseInput
       disabled={disabled}
-      type="number"
-      value={value || undefined}
+      type="text"
+      value={value || ""}
       placeholder={placeholder}
       errors={errors}
       autoFocus={autoFocus}
-      onChange={(v) =>
-        v.target.value === ""
-          ? onChange(undefined)
-          : onChange(Number(v.target.value))
-      }
+      onChange={(v) => {
+        if (v.target.value === "") {
+          return onChange(undefined);
+        }
+
+        const n = Number(v.target.value);
+
+        if (isNaN(n)) {
+          return onChange(undefined);
+        }
+        onChange(n);
+      }}
     />
   );
 };
-// ({
-//   value,
-//   onChange,
-//   errors,
-//   disabled
-// }: T.InputProps<number | undefined>) => (
-//   <input
-//     className={
-//       'form-control' + (errors && errors.length > 0 ? '  is-invalid' : '')
-//     }
-//     disabled={disabled}
-//     type="number"
-//     value={value || ''}
-//     onChange={v =>
-//       v.target.value === ''
-//         ? onChange(undefined)
-//         : onChange(Number(v.target.value))
-//     }
-//   />
-// );
 
 export default InputNumber;
