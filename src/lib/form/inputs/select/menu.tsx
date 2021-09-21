@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import * as T from "../../type";
-// import Chevron from "common/components/chevron";
 import Input from "../text";
 
 import MenuWrapper from "../../../components/popup-menu";
@@ -31,7 +29,7 @@ export default <A extends number | string | undefined>(props: {
   };
 
   return (
-    <MenuWrapper open={open} onCancel={onCancel}>
+    <MenuWrapper open={open} onCancel={onCancel} position="top-10 left-0">
       <>
         {enableSearch && (
           <Input

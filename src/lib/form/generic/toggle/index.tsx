@@ -13,7 +13,7 @@ const ActionButtonWrapper = (props: {
   const { children, onClick } = props;
   return (
     <div
-      className="w-full text-right text-primary cursor-pointer "
+      className="w-full text-right text-primary cursor-pointer"
       onClick={onClick}
     >
       {children}

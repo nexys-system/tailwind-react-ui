@@ -33,7 +33,7 @@ export default (props: {
     >
       <ul
         className={`
-        max-h-80 overflow-auto
+        max-h-80 min-w-64 overflow-auto
         cursor-pointer
         transition-opacity duration-500 
         ${position} 

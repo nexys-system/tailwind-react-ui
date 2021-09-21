@@ -5,7 +5,7 @@ export default () => {
   return (
     <>
       <h1>Card</h1>
-      <Card>
+      <Card title="Card Title">
         <p>Content</p>
       </Card>
     </>

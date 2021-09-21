@@ -1,6 +1,5 @@
 import React from "react";
 import * as T from "../type";
-
 import BaseInput from "./base";
 
 export const InputNumber = ({

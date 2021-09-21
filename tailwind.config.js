@@ -18,6 +18,9 @@ module.exports = {
     width: ["hover", "focus"],
   },
   theme: {
+    minWidth: {
+      64: "16rem",
+    },
     extend: {
       brightness: ["hover", "focus"],
       transitionProperty: {
@@ -31,8 +34,8 @@ module.exports = {
       },
       colors: {
         primary: {
-          ...colors.sky,
-          DEFAULT: colors.sky["500"],
+          ...colors.blue,
+          DEFAULT: colors.blue["500"],
         },
       },
     },
