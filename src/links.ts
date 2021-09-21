@@ -6,12 +6,13 @@ import Dropdowns from "./app/components/dropdowns";
 import Pill from "./app/components/pill";
 import Spinner from "./app/components/spinners";
 import Icons from "./app/components/icons";
-import Rating from "./app/components/rating";
+import Table from "./app/components/table";
 
 import TextInput from "./app/form/text";
 import NumberInput from "./app/form/number";
 import BooleanInput from "./app/form/switch";
 import SelectInput from "./app/form/select";
+import Rating from "./app/form/rating";
 
 interface MenuItem {
   name: string;
@@ -32,7 +33,8 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Pill", link: "/pill", Component: Pill },
   { name: "Spinners", link: "/spinner", Component: Spinner },
   { name: "Icons", link: "/icons", Component: Icons },
-  { name: "Rating", link: "/rating", Component: Rating },
+
+  { name: "Table", link: "/table", Component: Table },
 ];
 
 export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
@@ -40,6 +42,7 @@ export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Number Input", link: "/number-input", Component: NumberInput },
   { name: "Select Input", link: "/select-input", Component: SelectInput },
   { name: "Switch", link: "/switch", Component: BooleanInput },
+  { name: "Rating", link: "/rating", Component: Rating },
 ];
 
 export const menus: MenuItem[] = Object.values(links);
