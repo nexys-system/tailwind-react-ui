@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
-import { ToastProp } from "../../context-provided/notification/type";
-import { mapTypeToColor } from "../../context-provided/notification/utils";
+import { ToastProp } from "../../../context-provider/notification/type";
+import { mapTypeToColor } from "../../../context-provider/notification/utils";
 
-import { Close } from "../../icons";
+import { Close } from "../../../icons";
 
 const ToastUnit = ({
   idx,

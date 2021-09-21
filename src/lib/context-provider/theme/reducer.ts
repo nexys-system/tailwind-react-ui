@@ -9,3 +9,5 @@ export const reducer = (data: RT.Data, action: RT.Actions) => {
       return data;
   }
 };
+
+export default reducer;

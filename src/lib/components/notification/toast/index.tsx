@@ -1,23 +1,12 @@
 import React from "react";
 
 import ToastUnit from "./unit";
-import * as Ctx from "../../context-provided/notification/context";
-import { NotificationType } from "../../context-provided/notification/type";
-import { mapTypeToTitle } from "../../context-provided/notification/utils";
+import * as Ctx from "../../../context-provider/notification/context";
+import { NotificationType } from "../../../context-provider/notification/type";
+import { mapTypeToTitle } from "../../../context-provider/notification/utils";
 
 const Toast = () => {
   const { notifications, rmNotification } = Ctx.useToastContext();
-
-  // const toasts: ToastProp[] = notifications
-  //   .filter((x) => x.type === NotificationType.toast)
-  //   .map((x) => {
-  //     return {
-  //       title: mapTypeToTitle(x.messageType),
-  //       content: x.text,
-  //       timestring: "",
-  //       messageType: x.messageType,
-  //     };
-  //   });
 
   return (
     <div

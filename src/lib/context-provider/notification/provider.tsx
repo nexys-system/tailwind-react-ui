@@ -1,7 +1,7 @@
 import React from "react";
 import Ctx from "./context";
-import Toast from "../../notification/toast";
-import Banner from "../../notification/banner";
+import Toast from "../../components/notification/toast";
+import Banner from "../../components/notification/banner";
 
 import { Notification } from "./type";
 

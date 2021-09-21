@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 // needs to be replace with notifications context
-import { AppContext } from "../context-provided/theme/context";
+import { AppContext } from "../context-provider/theme/context";
 import Spinner from "./loader/circular";
 
 interface Props {

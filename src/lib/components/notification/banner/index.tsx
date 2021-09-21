@@ -1,13 +1,13 @@
 import React from "react";
-import * as Ctx from "../../context-provided/notification/context";
+import * as Ctx from "../../../context-provider/notification/context";
 
 import BannerUI from "./ui";
 
 import {
   NotificationType,
   MessageType,
-} from "../../context-provided/notification/type";
-import { mapTypeToColor } from "../../context-provided/notification/utils";
+} from "../../../context-provider/notification/type";
+import { mapTypeToColor } from "../../../context-provider/notification/utils";
 
 interface Banner {
   text: string;

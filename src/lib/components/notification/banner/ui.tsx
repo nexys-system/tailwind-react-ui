@@ -2,7 +2,7 @@ import React from "react";
 import {
   Close as CloseIcon,
   Speakerphone as SpeakerphoneIcon,
-} from "../../icons";
+} from "../../../icons";
 
 export interface BannerProps {
   label: string;

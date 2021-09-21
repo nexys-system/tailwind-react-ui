@@ -1,3 +1,4 @@
+export * as Notification from "./notification";
 export * as Loader from "./loader";
 
 import AppTitle from "./app-title";
