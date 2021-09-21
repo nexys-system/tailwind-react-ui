@@ -1,5 +1,5 @@
 export const version =
-  import.meta.env.SNOWPACK_PUBLIC_VERSOIN || "unset_version";
+  import.meta.env.SNOWPACK_PUBLIC_VERSION || "unset_version";
 export const sha = import.meta.env.SNOWPACK_PUBLIC_GIT_SHA || "unset_sha";
 export const title =
   import.meta.env.SNOWPACK_PUBLIC_TITLE || "React Tailwind UI";
