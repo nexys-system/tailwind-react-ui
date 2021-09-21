@@ -1,6 +1,6 @@
 {
   "name": "@nexys/tailwind-react-ui",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "main": "index.js",
   "types": "dist/index.d.ts",
