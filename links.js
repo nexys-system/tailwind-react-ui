@@ -4,6 +4,7 @@ import Badge from "./app/components/badge.js";
 import Card from "./app/components/card.js";
 import Dropdowns from "./app/components/dropdowns.js";
 import Spinner from "./app/components/spinners.js";
+import Icons from "./app/components/icons.js";
 import TextInput from "./app/form/text.js";
 import NumberInput from "./app/form/number.js";
 import BooleanInput from "./app/form/switch.js";
@@ -16,7 +17,8 @@ export const components = [
   {name: "Badge", link: "/badge", Component: Badge},
   {name: "Card", link: "/card", Component: Card},
   {name: "Dropdowns", link: "/dropdown", Component: Dropdowns},
-  {name: "Spinners", link: "/spinner", Component: Spinner}
+  {name: "Spinners", link: "/spinner", Component: Spinner},
+  {name: "Icons", link: "/icons", Component: Icons}
 ];
 export const formComponents = [
   {name: "Text Input", link: "/text-input", Component: TextInput},
