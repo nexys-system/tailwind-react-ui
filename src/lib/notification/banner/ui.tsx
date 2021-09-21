@@ -1,5 +1,8 @@
 import React from "react";
-import { Close } from "../../icons";
+import {
+  Close as CloseIcon,
+  Speakerphone as SpeakerphoneIcon,
+} from "../../icons";
 
 export interface BannerProps {
   label: string;
@@ -14,10 +17,7 @@ export default ({
   label,
   link,
   onDismiss = () => alert("initialize onDismiss event"),
-  Icon = () => (
-    <i className="fas fa-bullhorn text-white mr-5"></i>
-    // <SpeakerphoneIcon className="h-6 w-6 text-white" aria-hidden="true" />
-  ),
+  Icon = () => <SpeakerphoneIcon />,
   isHtml,
   color = "sky",
 }: BannerProps) => {
@@ -54,8 +54,7 @@ export default ({
               type="button"
               className="-mr-1 flex p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2 float-right"
             >
-              {/* <XIcon className="h-6 w-6 text-white" aria-hidden="true" /> */}
-              <Close className="text-white" />
+              <CloseIcon className="text-white" />
               <span className="hidden md:inline text-white font-extralight">
                 Dismiss
               </span>

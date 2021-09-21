@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AppContext, Types } from "../context-provided/context";
+import { AppContext, Types } from "../context-provided/theme/context";
 import { Moon, Sun } from "../icons";
 
 const Toggle = () => {

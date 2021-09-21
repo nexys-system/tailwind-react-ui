@@ -1,9 +1,9 @@
 import React from "react";
 
 import ToastUnit from "./unit";
-import * as Ctx from "../context";
-import { NotificationType, ToastProp, MessageType } from "../type";
-import { mapTypeToColor, mapTypeToTitle } from "../utils";
+import * as Ctx from "../../context-provided/notification/context";
+import { NotificationType } from "../../context-provided/notification/type";
+import { mapTypeToTitle } from "../../context-provided/notification/utils";
 
 const Toast = () => {
   const { notifications, rmNotification } = Ctx.useToastContext();

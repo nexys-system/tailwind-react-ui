@@ -1,7 +1,8 @@
 import React from "react";
 import Ctx from "./context";
-import Toast from "./toast";
-import Banner from "./banner";
+import Toast from "../../notification/toast";
+import Banner from "../../notification/banner";
+
 import { Notification } from "./type";
 
 export const Provider = ({ children }: { children: any }) => {

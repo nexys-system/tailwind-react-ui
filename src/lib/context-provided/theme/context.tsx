@@ -3,7 +3,6 @@ import { reducer } from "./reducer";
 import { Data, Types, Actions } from "./type";
 
 export const initData: Data = {
-  message: undefined,
   theme: window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light",

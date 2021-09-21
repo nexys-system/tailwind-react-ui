@@ -1,8 +1,4 @@
 export interface Data {
-  message?: {
-    message: string;
-    type?: "success" | "error" | "warning" | "info";
-  };
   theme: "dark" | "light";
 }
 
@@ -18,15 +14,10 @@ export type ActionMap<M extends { [index: string]: any }> = {
 };
 
 export enum Types {
-  Message = "MESSAGE",
-  Theme = "THEME"
+  Theme = "THEME",
 }
 
 export type Payload = {
-  [Types.Message]: {
-    message: string;
-    type?: "error" | "success" | "info" | "warning";
-  };
   [Types.Theme]: "light" | "dark";
 };
 
