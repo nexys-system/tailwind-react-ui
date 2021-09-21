@@ -19,9 +19,7 @@ export type ActionMap<M extends { [index: string]: any }> = {
 
 export enum Types {
   Message = "MESSAGE",
-  Theme = "THEME",
-  SurveyInit = "SURVEY_INIT",
-  SurveyAnswer = "SURVEY_ANSWER",
+  Theme = "THEME"
 }
 
 export type Payload = {
