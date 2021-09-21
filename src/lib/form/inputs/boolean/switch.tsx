@@ -1,5 +1,5 @@
 import React from "react";
-import * as T from "../type";
+import * as T from "../../type";
 
 export default ({ value, disabled, onChange }: T.InputProps<boolean>) => {
   const classes = [

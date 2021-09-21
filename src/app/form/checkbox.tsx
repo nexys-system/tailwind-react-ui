@@ -8,7 +8,7 @@ export default () => {
     <>
       <code>{value}</code>
       <Wrapper inputType={FormType.Switch} label="Switch (boolean input)">
-        <Inputs.Checkbox value={value} onChange={(v) => setValue(v)} />
+        <Inputs.Boolean.Checkbox value={value} onChange={(v) => setValue(v)} />
       </Wrapper>
     </>
   );

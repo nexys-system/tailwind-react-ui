@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Input from "../text";
+import Input from "../../text";
 
-import MenuWrapper from "../../../components/popup-menu";
+import MenuWrapper from "../../../../components/popup-menu";
 import MenuItem from "./menu-item";
 
-export default <A extends number | string | undefined>(props: {
+export default <A,>(props: {
   open: boolean;
   onSelect: (id: A) => void;
   onCancel: () => void;
@@ -34,15 +34,14 @@ export default <A extends number | string | undefined>(props: {
         {enableSearch && (
           <Input
             value={search}
-            autoFocus
             onChange={handleSearch}
             placeholder="Search..."
           />
         )}
-        {options.map((o) => (
+        {options.map((o, i) => (
           <MenuItem
             {...o}
-            key={o.id}
+            key={i}
             onSelect={(v) => {
               setSearch("");
               setOptions(props.options);

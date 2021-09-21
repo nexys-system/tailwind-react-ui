@@ -1,6 +1,6 @@
 import React from "react";
 
-export default <A extends number | string | undefined>(props: {
+export default <A,>(props: {
   id: A;
   name: string;
   onSelect: (id: A) => void;
