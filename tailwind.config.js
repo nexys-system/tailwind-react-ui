@@ -1,12 +1,14 @@
 const colors = require("tailwindcss/colors");
 const themeDefault = require("tailwindcss/defaultTheme");
 
+///* purge: {
+// enabled: true,
+// content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx}"],
+//},*/
+
 module.exports = {
   darkMode: "class",
-  purge: {
-    enabled: true,
-    content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx}"],
-  },
+
   variants: {
     height: ["responsive", "hover", "focus"],
     /*https://tailwindcss.com/docs/hover-focus-and-other-states#disabled*/

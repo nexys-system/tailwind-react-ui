@@ -1,6 +1,6 @@
 {
   "name": "@nexys/tailwind-react-ui",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -8,10 +8,11 @@
   ],
   "scripts": {
     "start": "SNOWPACK_PUBLIC_URL= snowpack dev",
-    "buildAll": "SNOWPACK_PUBLIC_URL= yarn css; yarn build; bash ./replace_path.sh",
-    "build": "tsc",
+    "build": "snowpack build",
+    "buildWCSS": "yarn css; yarn build",
+    "buildpackage": "tsc",
     "test": "jest",
-    "css": "tailwindcss -o public/tailwind.css"
+    "css": "tailwindcss -o public/out.css"
   },
   "peerDependencies": {
     "@headlessui/react": "^1.4.0",
