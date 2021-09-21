@@ -1,5 +1,5 @@
 import React from "react";
-import { Star } from "../icons";
+import { Star } from "../../icons";
 
 type Rating = 0 | 1 | 2 | 3 | 4 | 5;
 interface Props {
