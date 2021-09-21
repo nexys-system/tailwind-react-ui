@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "start": "SNOWPACK_PUBLIC_URL= snowpack dev",
-    "build": "yarn css; snowpack build",
+    "build": "snowpack build",
+    "buildWCSS": "yarn css; yarn build",
     "buildpackage": "tsc",
     "test": "jest",
     "css": "tailwindcss -o public/out.css"
