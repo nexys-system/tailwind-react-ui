@@ -1,12 +1,14 @@
 import React from "react";
 import * as Inputs from "../../lib/form/inputs";
+import Wrapper from "../../lib/form/wrapper";
 export default () => {
   const [value, setValue] = React.useState<boolean | undefined>();
   return (
     <>
-      <h1>Switch (boolean input)</h1>
       <code>{value}</code>
-      <Inputs.Switch value={value} onChange={(v) => setValue(v)} />
+      <Wrapper inputType="switch" label="Switch (boolean input)">
+        <Inputs.Switch value={value} onChange={(v) => setValue(v)} />
+      </Wrapper>
     </>
   );
 };

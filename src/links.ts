@@ -11,6 +11,7 @@ import Rating from "./app/components/rating";
 import TextInput from "./app/form/text";
 import NumberInput from "./app/form/number";
 import BooleanInput from "./app/form/switch";
+import SelectInput from "./app/form/select";
 
 interface MenuItem {
   name: string;
@@ -37,7 +38,7 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
 export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Text Input", link: "/text-input", Component: TextInput },
   { name: "Number Input", link: "/number-input", Component: NumberInput },
-  { name: "Select Input", link: "/select-input", Component: Buttons },
+  { name: "Select Input", link: "/select-input", Component: SelectInput },
   { name: "Switch", link: "/switch", Component: BooleanInput },
 ];
 
