@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default ({ rating, onChange }: Props) => {
-  const classes = "p-2 text-xl cursor-pointer fas fa-star";
+  const classes = "cursor-pointer";
   const ratings: Rating[] = [1, 2, 3, 4, 5];
   return (
     <span>

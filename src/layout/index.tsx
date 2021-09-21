@@ -18,7 +18,7 @@ export default ({ children }: { children: JSX.Element }) => {
             <div>
               <ul>
                 {components.map((c) => (
-                  <li className="text-blue-500 hover:text-blue-800">
+                  <li className={"text-blue-500 hover:text-blue-800"}>
                     <Link to={c.link}>{c.name}</Link>
                   </li>
                 ))}
