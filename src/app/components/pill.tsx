@@ -9,6 +9,7 @@ export default () => {
         id={1}
         title="Pill one"
         badge="A"
+        color="blue"
         selected={selected === 1}
         onSelect={() => setSelected(1)}
       />
@@ -16,8 +17,17 @@ export default () => {
         id={2}
         title="Pill two"
         badge="B"
+        color="rose"
         selected={selected === 2}
         onSelect={() => setSelected(2)}
+      />
+      <Pill
+        id={2}
+        title="Pill three"
+        badge="C"
+        color="purple"
+        selected={selected === 3}
+        onSelect={() => setSelected(3)}
       />
     </>
   );
