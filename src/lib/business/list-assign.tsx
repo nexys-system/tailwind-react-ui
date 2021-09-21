@@ -1,6 +1,6 @@
 // taken from https://material-ui.com/components/lists/#list-controls
 import React from "react";
-import Checkbox from "../form/inputs/checkbox";
+import Checkbox from "../form/inputs/boolean/checkbox";
 
 const Loader = (props: { isLoading: boolean }): JSX.Element | null => {
   const { isLoading } = props;
