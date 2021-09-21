@@ -1,6 +1,5 @@
 {
   "imports": {
-    "@headlessui/react": "./@headlessui/react.js",
     "@nexys/utils": "./@nexys/utils.js",
     "@nexys/validation": "./@nexys/validation.js",
     "react": "./react.js",
