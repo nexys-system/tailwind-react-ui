@@ -22,10 +22,12 @@ import {
   PaginationWrapperProps,
   OrderControllerUpAndDownProps,
   OrderControllerProps,
+  GlobalSearchProps,
 } from "@nexys/core-list/dist/list/ui-type";
 
 import LoaderMain from "../../loader/main";
 import Layout from "./layout";
+import InputText from "../../../form/inputs/text";
 export { Layout };
 
 export const Loader = () => <LoaderMain />;
@@ -40,7 +42,14 @@ const Alert = ({
   type?: "error" | "success" | "info" | "warning";
 }): JSX.Element => <div className={"alert"}>{children}</div>;
 
-export const GlobalSearch = () => <></>;
+export const GlobalSearch = ({ onChange, filters }: GlobalSearchProps) => (
+  <InputText
+    value={filters && filters["globalSearch"]}
+    placeholder={"search"}
+    onChange={(value) => onChange({ name: "globalSearch", value: value || "" })}
+  />
+);
+
 export const PopoverFilter = () => <></>;
 export const FilterUnit = () => <></>;
 
