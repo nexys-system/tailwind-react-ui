@@ -25,9 +25,9 @@ const FormUnit = <A,>({
     case T.FormType.Number:
       return <Inputs.Number {...commonProps} />;
     case T.FormType.Select:
-      return <Inputs.Select {...commonProps} />;
+      return <Inputs.Select.Scalar {...commonProps} />;
     case T.FormType.Switch:
-      return <Inputs.Switch {...commonProps} />;
+      return <Inputs.Boolean.Switch {...commonProps} />;
   }
 };
 

@@ -25,7 +25,9 @@ export default <A extends { [k: string]: any }>(props: T.GeneratorProps<A>) => {
               errors={errorUnit}
               key={i}
               label={fd.label}
-              inputType={fd.uiType === T.FormType.Switch ? "switch" : "default"}
+              inputType={
+                fd.uiType === T.FormType.Switch ? T.FormType.Switch : undefined
+              }
             >
               <FormUnit
                 fd={fd}
