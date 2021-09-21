@@ -12,7 +12,9 @@ export default ({children}) => {
     className: "container mx-auto px-4 py-4"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "grid grid-cols-8 gap-4"
-  }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("h3", {
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "hidden sm:block"
+  }, /* @__PURE__ */ React.createElement("h3", {
     className: "ph-1 text-xl"
   }, "Components"), /* @__PURE__ */ React.createElement("ul", null, components.map((c, i) => /* @__PURE__ */ React.createElement("li", {
     key: i,
