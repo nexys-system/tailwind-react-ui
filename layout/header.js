@@ -1,5 +1,6 @@
 import React, {useState} from "../_snowpack/pkg/react.js";
 import {Link} from "../_snowpack/pkg/react-router-dom.js";
+import {title} from "../config.js";
 import {menus, links} from "../links.js";
 import {classNames} from "../lib/utils/index.js";
 const navigation = menus.map((menu) => {
@@ -19,7 +20,7 @@ export default function Example() {
     className: "flex-shrink-0 flex items-center"
   }, /* @__PURE__ */ React.createElement(Link, {
     to: links.home.link
-  }, "React Tailwind UI")), /* @__PURE__ */ React.createElement("div", {
+  }, title)), /* @__PURE__ */ React.createElement("div", {
     className: "hidden sm:block sm:ml-6"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "flex space-x-4"
@@ -27,7 +28,7 @@ export default function Example() {
     onClick: () => setCurrent(item.href),
     key: item.name,
     to: item.href,
-    className: classNames(current === item.href ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white", "px-3 py-2 rounded-md text-sm font-medium"),
+    className: classNames(current === item.href ? "text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white", "px-3 py-2 rounded-md text-sm font-medium"),
     "aria-current": item.current ? "page" : void 0
   }, item.name))))))));
 }
