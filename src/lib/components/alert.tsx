@@ -25,13 +25,13 @@ export default ({
   }
 
   return (
-    <p className={"rounded m-1 p-2 bg-primary-500 text-white"}>
+    <div className={"rounded m-1 p-2 bg-primary-500 text-white"}>
       {Icon && <Icon />} {children}
       {dismissible && (
         <span onClick={handleClick} className={"cursor-pointer float-right"}>
           <XCircle />
         </span>
       )}
-    </p>
+    </div>
   );
 };
