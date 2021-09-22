@@ -27,11 +27,14 @@ export const get = (
         shade < 900 ? shade + 100 : shade
       }`
     );
-    classArray.push(
-      theme === "dark"
-        ? "hover:shadow-primary"
-        : "shadow-sm focus:shadow-md hover:shadow-lg"
-    );
+
+    if (!disabled) {
+      classArray.push(
+        theme === "dark"
+          ? "hover:shadow-primary"
+          : "shadow-sm focus:shadow-md hover:shadow-lg"
+      );
+    }
   }
 
   if (variant === "transparent") {
