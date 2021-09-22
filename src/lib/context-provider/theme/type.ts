@@ -1,5 +1,7 @@
+export type Theme = "dark" | "light";
+
 export interface Data {
-  theme: "dark" | "light";
+  theme: Theme;
 }
 
 export type ActionMap<M extends { [index: string]: any }> = {
@@ -18,7 +20,7 @@ export enum Types {
 }
 
 export type Payload = {
-  [Types.Theme]: "light" | "dark";
+  [Types.Theme]: Theme;
 };
 
 export type Actions = ActionMap<Payload>[keyof ActionMap<Payload>];
