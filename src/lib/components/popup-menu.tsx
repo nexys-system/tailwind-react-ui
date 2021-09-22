@@ -28,11 +28,12 @@ export default (props: {
   return (
     <div
       ref={wrapperRef}
-      className={`z-99 ${open ? "opacity-100" : "opacity-0"}
+      className={`${open ? "opacity-100" : "opacity-0"}
       ${open ? "visible" : "invisible"}`}
     >
       <ul
         className={`
+        z-50
         max-h-80 min-w-64 overflow-auto
         cursor-pointer
         transition-opacity duration-500 
