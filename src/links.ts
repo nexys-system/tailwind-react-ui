@@ -8,6 +8,7 @@ import Spinner from "./app/components/spinners";
 import Icons from "./app/components/icons";
 import Table from "./app/components/table";
 import Code from "./app/components/code";
+import Typography from "./app/components/typography";
 
 import TextInput from "./app/form/text";
 import NumberInput from "./app/form/number";
@@ -38,6 +39,7 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
 
   { name: "Table", link: "/table", Component: Table },
   { name: "Code", link: "/code", Component: Code },
+  { name: "Typography", link: "/typography", Component: Typography },
 ];
 
 export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
