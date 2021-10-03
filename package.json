@@ -18,7 +18,7 @@
   "peerDependencies": {
     "@headlessui/react": "^1.4.0",
     "@nexys/core-list": "^0.0.5",
-    "@nexys/validation": "^2.1.0",
+    "@nexys/validation": "^2.1.2",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
     "@types/react-router": "^5.1.13",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@headlessui/react": "^1.4.0",
     "@nexys/core-list": "^0.0.5",
-    "@nexys/validation": "^2.1.0",
+    "@nexys/validation": "^2.1.2",
     "@snowpack/plugin-build-script": "^2.1.0",
     "@snowpack/plugin-webpack": "^3.0.0",
     "@tailwindcss/forms": "^0.3.3",
