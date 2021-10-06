@@ -16,7 +16,7 @@ export default function Example() {
   const [current, setCurrent] = useState(links.home.link);
 
   return (
-    <div className="bg-blue-400 text-white">
+    <div className="bg-primary text-white">
       <div className="max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">

@@ -23,7 +23,7 @@ export default ({ children }: { children: JSX.Element }) => {
               <h3 className={"ph-1 text-xl"}>Components</h3>
               <ul>
                 {components.map((c, i) => (
-                  <li key={i} className="text-blue-500 hover:text-blue-800">
+                  <li key={i} className="text-primary hover:text-primary-800">
                     <Link to={c.link}>{c.name}</Link>
                   </li>
                 ))}
@@ -31,7 +31,7 @@ export default ({ children }: { children: JSX.Element }) => {
               <h3 className={"ph-1 text-xl"}>Form</h3>
               <ul>
                 {formComponents.map((c, i) => (
-                  <li key={i} className="text-blue-500 hover:text-blue-800">
+                  <li key={i} className="text-primary hover:text-primary-800">
                     <Link to={c.link}>{c.name}</Link>
                   </li>
                 ))}
