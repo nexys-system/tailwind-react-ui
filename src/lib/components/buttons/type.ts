@@ -1,9 +1,11 @@
+import { ContextColor } from "../type";
+
 export type ButtonType = "button" | "submit" | "reset";
 
 export interface ButtonStyle {
-  color: string;
-  shade: number;
-  textColor: string;
+  color: ContextColor;
+  //shade: number;
+  textColor: ContextColor;
   variant: "filled" | "transparent";
 }
 

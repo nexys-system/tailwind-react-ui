@@ -1,3 +1,4 @@
+import { contextBgColors, contextTextColors } from "../type";
 import { Theme } from "../../context-provider/theme/type";
 import { ButtonStyle } from "./type";
 
@@ -5,17 +6,20 @@ const classTransitions =
   "transition-all duration-500 ease-in-out hover:brightness-150 transform hover:-translate-y-1 hover:scale-110";
 
 export const get = (
-  { variant, color, shade, textColor }: ButtonStyle,
+  { variant, color, textColor }: ButtonStyle,
   disabled: boolean = false,
   theme: Theme = "light"
 ): string[] => {
+  const bgColor = contextBgColors[color];
+  const textColorClass = contextTextColors[textColor];
+  // to remove (will not work with tailwind compilation)
+  const shade = 500;
+
   const classArray: string[] = [
     "rounded-full",
 
     `m-3 pl-5 pr-5 pt-2 pb-2 ${
-      variant === "filled"
-        ? textColor
-        : `text-${color}-${shade} dark:text-white `
+      variant === "filled" ? textColorClass : contextTextColors[color]
     } border-none`,
 
     "font-extralight",
@@ -23,9 +27,7 @@ export const get = (
 
   if (variant === "filled") {
     classArray.push(
-      `bg-${color}-${shade} dark:bg-${color}-${
-        shade < 900 ? shade + 100 : shade
-      }`
+      bgColor //dark:bg-${color}-${shade < 900 ? shade + 100 : shade}`
     );
 
     if (!disabled) {

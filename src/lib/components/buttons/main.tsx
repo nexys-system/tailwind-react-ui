@@ -4,6 +4,7 @@ import { AppContext } from "../../context-provider/theme/context";
 import Spinner from "../loader/circular";
 import { ButtonProps } from "./type";
 import * as Classes from "./classes";
+import { ContextColor } from "../type";
 
 export default ({
   id,
@@ -11,9 +12,8 @@ export default ({
   onClick,
   type,
   disabled = false,
-  color = "primary",
-  shade = 500,
-  textColor = "text-white",
+  color = ContextColor.primary,
+  textColor = ContextColor.white,
   variant = "filled",
   isLoading = false,
 }: ButtonProps) => {
@@ -26,7 +26,7 @@ export default ({
   };
 
   const classArray: string[] = Classes.get(
-    { color, textColor, variant, shade },
+    { color, textColor, variant },
     disabled,
     theme
   );
