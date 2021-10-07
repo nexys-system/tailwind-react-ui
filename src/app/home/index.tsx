@@ -33,7 +33,8 @@ export default () => {
       <p>
         <AHref link={"https://github.com/nexys-system/tailwind-react-ui"}>
           <>
-            <GitHub /> Github repository
+            <GitHub svgProps={{ stroke: "none", fill: "black" }} /> Github
+            repository
           </>
         </AHref>
       </p>

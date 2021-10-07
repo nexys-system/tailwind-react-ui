@@ -8,7 +8,13 @@ const themeDefault = require("tailwindcss/defaultTheme");
 
 module.exports = {
   darkMode: "class",
-
+  // purge: {
+  //   enabled: true,
+  //   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  //   options: {
+  //     safelist: [/primary/, /secondary/, /info/, /warning/, /success/, /error/],
+  //   },
+  // },
   variants: {
     height: ["responsive", "hover", "focus"],
     /*https://tailwindcss.com/docs/hover-focus-and-other-states#disabled*/
@@ -34,16 +40,41 @@ module.exports = {
       },
       colors: {
         primary: {
+          ...colors.sky,
+          DEFAULT: colors.sky["500"],
+        },
+        secondary: {
+          ...colors.gray,
+          DEFAULT: colors.gray["500"],
+        },
+        success: {
+          ...colors.green,
+          DEFAULT: colors.green["500"],
+        },
+        warning: {
+          ...colors.amber,
+          DEFAULT: colors.amber["500"],
+        },
+        error: {
+          ...colors.rose,
+          DEFAULT: colors.rose["500"],
+        },
+        info: {
           ...colors.blue,
           DEFAULT: colors.blue["500"],
+        },
+        white: {
+          ...colors.white,
+          DEFAULT: colors.white,
+        },
+        black: {
+          ...colors.black,
+          DEFAULT: colors.black,
         },
       },
     },
     colors: {
       ...colors,
-      success: {
-        DEFAULT: "#83c5be",
-      },
       bgPrimary: {
         DEFAULT: "hsla(288, 20%, 75%, 1)",
         dark: "#756878",

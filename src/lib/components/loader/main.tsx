@@ -1,5 +1,6 @@
 import React from "react";
 
+// w-3 w-4 w-5 w-6 h-3 h-4 h-5 h-6
 export default (props: {
   className?: string;
   dotClassName?: string;

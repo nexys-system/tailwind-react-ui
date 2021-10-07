@@ -38,6 +38,9 @@ export const Download = IconFactorySVG(
 export const Edit = IconFactorySVG(
   "M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
 );
+export const Exclamation = IconFactorySVG(
+  "M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+);
 export const Exit = IconFactorySVG(
   "M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
 );
@@ -53,8 +56,14 @@ export const GitHub = IconFactorySVG(
 export const Home = IconFactorySVG(
   "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
 );
+export const Language = IconFactorySVG(
+  "M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+);
 export const LockOpen = IconFactorySVG(
   "M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"
+);
+export const Map = IconFactorySVG(
+  "M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
 );
 export const Menu = IconFactorySVG("M4 6h16M4 12h16M4 18h16");
 export const Moon = IconFactorySVG(
@@ -90,7 +99,9 @@ export const Tag = IconFactorySVG(
 export const User = IconFactorySVG(
   "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
 );
-
+export const Watch = IconFactorySVG(
+  "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+);
 export const Speakerphone = IconFactorySVG(
   "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
 );

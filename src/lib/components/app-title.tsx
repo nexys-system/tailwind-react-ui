@@ -12,14 +12,6 @@ export default ({ title }: { title: string }) => {
           textDecoration: "none",
         }}
       >
-        {/* <img
-          src="/logo.png"
-          alt="logo"
-          className="inline hover:opacity-80"
-          width={45}
-          height={45}
-        />
-        &nbsp;&nbsp; */}
         <span className="hidden md:inline">{title}</span>
       </Link>
     </h5>
