@@ -27,7 +27,7 @@ export const Statement = ({
     <span
       onClick={copyToClipboard ? handleClick : undefined}
       className={
-        "cursor-pointer rounded p-1 px-3 text-sm text-gray-300 hover:text-white " +
+        "cursor-pointer rounded p-1 pb-1 px-3 text-sm text-gray-300 hover:text-white " +
         (copyState === CopyState.progress ? "bg-yellow-500" : "bg-black")
       }
     >
@@ -39,7 +39,7 @@ export const Statement = ({
       {copyToClipboard && (
         <button
           disabled={copyState === CopyState.progress}
-          className={"border-l-2 border-gray-700"}
+          className={"border-l-2 border-gray-700 pl-2"}
         >
           {copyState !== CopyState.copied && <Clipboard />}
 
@@ -51,3 +51,5 @@ export const Statement = ({
     </span>
   );
 };
+
+// mb-1 mb-2 mb-3 mb-4

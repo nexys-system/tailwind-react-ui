@@ -8,13 +8,13 @@ const themeDefault = require("tailwindcss/defaultTheme");
 
 module.exports = {
   darkMode: "class",
-  purge: {
-    enabled: true,
-    content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-    options: {
-      safelist: [/primary/, /secondary/, /info/, /warning/, /success/, /error/],
-    },
-  },
+  // purge: {
+  //   enabled: true,
+  //   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  //   options: {
+  //     safelist: [/primary/, /secondary/, /info/, /warning/, /success/, /error/],
+  //   },
+  // },
   variants: {
     height: ["responsive", "hover", "focus"],
     /*https://tailwindcss.com/docs/hover-focus-and-other-states#disabled*/
