@@ -1,13 +1,16 @@
 export * as Notification from "./notification";
 export * as Loader from "./loader";
 import * as Buttons from "./buttons";
+import * as Alerts from "./alerts";
+import * as Pills from "./pills";
+import * as Badges from "./badges";
 
 import AppTitle from "./app-title";
 
 import Card from "./card";
 import Chevron from "./chevron";
 import FileUpload from "./file-upload";
-import Pill from "./pill";
+
 import PopupMenu from "./popup-menu";
 import Preview from "./preview";
 import ProgressBar from "./progress-bar";
@@ -17,13 +20,15 @@ import Tooltip from "./tooltip";
 const Button = Buttons.Main;
 
 export {
+  Alerts,
+  Badges,
   AppTitle,
   Button,
   Buttons,
   Card,
   Chevron,
   FileUpload,
-  Pill,
+  Pills,
   PopupMenu,
   Preview,
   ProgressBar,
