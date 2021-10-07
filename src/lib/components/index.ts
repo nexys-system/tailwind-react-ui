@@ -18,9 +18,14 @@ import ThemeToggle from "./theme-toggle";
 import Tooltip from "./tooltip";
 
 const Button = Buttons.Main;
+const Pill = Pills.Main;
+const Alert = Alerts.Main;
+const Badge = Badges.Main;
 
 export {
+  Alert,
   Alerts,
+  Badge,
   Badges,
   AppTitle,
   Button,
@@ -29,6 +34,7 @@ export {
   Chevron,
   FileUpload,
   Pills,
+  Pill,
   PopupMenu,
   Preview,
   ProgressBar,
