@@ -8,7 +8,13 @@ const themeDefault = require("tailwindcss/defaultTheme");
 
 module.exports = {
   darkMode: "class",
-
+  purge: {
+    enabled: true,
+    content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+    options: {
+      safelist: [/primary/, /secondary/, /info/, /warning/, /success/, /error/],
+    },
+  },
   variants: {
     height: ["responsive", "hover", "focus"],
     /*https://tailwindcss.com/docs/hover-focus-and-other-states#disabled*/
@@ -43,15 +49,15 @@ module.exports = {
         },
         success: {
           ...colors.green,
-          DEFAULT: colors.green["400"],
+          DEFAULT: colors.green["500"],
         },
         warning: {
           ...colors.amber,
-          DEFAULT: colors.amber["400"],
+          DEFAULT: colors.amber["500"],
         },
         error: {
           ...colors.rose,
-          DEFAULT: colors.rose["400"],
+          DEFAULT: colors.rose["500"],
         },
         info: {
           ...colors.blue,

@@ -28,6 +28,7 @@ export default ({
   const classArray: string[] = Classes.get(
     { color, textColor, variant },
     disabled,
+    isLoading,
     theme
   );
 
@@ -36,7 +37,7 @@ export default ({
       type={type}
       className={classArray.join(" ")}
       onClick={handleClick}
-      disabled={disabled}
+      disabled={disabled || isLoading}
     >
       {isLoading ? (
         <span className="flex flex-inline">

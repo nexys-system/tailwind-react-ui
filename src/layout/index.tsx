@@ -11,9 +11,10 @@ const nCols = 8;
 const leftNCols = 1;
 const rightNCols = nCols - leftNCols;
 
+// col-span-7 col-span-8
 export default ({ children }: { children: JSX.Element }) => {
   return (
-    <div className="flex flex-col h-screen justify-between">
+    <div className="flex flex-col h-screen justify-between font-extralight">
       <Header />
 
       <main className="flex-grow">
@@ -28,7 +29,8 @@ export default ({ children }: { children: JSX.Element }) => {
                   </li>
                 ))}
               </ul>
-              <h3 className={"ph-1 text-xl"}>Form</h3>
+              <br />
+              <h3 className={"ph-1 text-xl mt-10"}>Form</h3>
               <ul>
                 {formComponents.map((c, i) => (
                   <li key={i} className="text-primary hover:text-primary-800">

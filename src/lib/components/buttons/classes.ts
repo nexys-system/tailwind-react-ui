@@ -8,6 +8,7 @@ const classTransitions =
 export const get = (
   { variant, color, textColor }: ButtonStyle,
   disabled: boolean = false,
+  isLoading?: boolean,
   theme: Theme = "light"
 ): string[] => {
   const bgColor = contextBgColors[color];
@@ -17,20 +18,18 @@ export const get = (
 
   const classArray: string[] = [
     "rounded-full",
-
     `m-3 pl-5 pr-5 pt-2 pb-2 ${
       variant === "filled" ? textColorClass : contextTextColors[color]
     } border-none`,
-
     "font-extralight",
   ];
 
   if (variant === "filled") {
     classArray.push(
-      bgColor //dark:bg-${color}-${shade < 900 ? shade + 100 : shade}`
+      `${bgColor} hover:${bgColor}-400` //dark:bg-${color}-${shade < 900 ? shade + 100 : shade}`
     );
 
-    if (!disabled) {
+    if (!disabled && !isLoading) {
       classArray.push(
         theme === "dark"
           ? "hover:shadow-primary"
@@ -40,16 +39,18 @@ export const get = (
   }
 
   if (variant === "transparent") {
-    classArray.push(`hover:font-light hover:text-${color}-${shade + 200}`);
+    classArray.push(
+      `hover:font-light hover:text-${color}-${shade + 200} font-normal`
+    );
   }
 
   const classDisabled = "opacity-50 cursor-default";
 
-  if (!disabled) {
+  if (!disabled && !isLoading) {
     classArray.push(classTransitions);
   }
 
-  if (disabled) {
+  if (disabled || isLoading) {
     classArray.push(classDisabled);
   }
 
