@@ -8,7 +8,7 @@ const leftNCols = 1;
 const rightNCols = nCols - leftNCols;
 export default ({children}) => {
   return /* @__PURE__ */ React.createElement("div", {
-    className: "flex flex-col h-screen justify-between"
+    className: "flex flex-col h-screen justify-between font-extralight"
   }, /* @__PURE__ */ React.createElement(Header, null), /* @__PURE__ */ React.createElement("main", {
     className: "flex-grow"
   }, /* @__PURE__ */ React.createElement("div", {
@@ -21,14 +21,14 @@ export default ({children}) => {
     className: "ph-1 text-xl"
   }, "Components"), /* @__PURE__ */ React.createElement("ul", null, components.map((c, i) => /* @__PURE__ */ React.createElement("li", {
     key: i,
-    className: "text-blue-500 hover:text-blue-800"
+    className: "text-primary hover:text-primary-800"
   }, /* @__PURE__ */ React.createElement(Link, {
     to: c.link
-  }, c.name)))), /* @__PURE__ */ React.createElement("h3", {
-    className: "ph-1 text-xl"
+  }, c.name)))), /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("h3", {
+    className: "ph-1 text-xl mt-10"
   }, "Form"), /* @__PURE__ */ React.createElement("ul", null, formComponents.map((c, i) => /* @__PURE__ */ React.createElement("li", {
     key: i,
-    className: "text-blue-500 hover:text-blue-800"
+    className: "text-primary hover:text-primary-800"
   }, /* @__PURE__ */ React.createElement(Link, {
     to: c.link
   }, c.name))))), /* @__PURE__ */ React.createElement("div", {

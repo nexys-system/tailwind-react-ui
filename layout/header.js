@@ -9,7 +9,7 @@ const navigation = menus.map((menu) => {
 export default function Example() {
   const [current, setCurrent] = useState(links.home.link);
   return /* @__PURE__ */ React.createElement("div", {
-    className: "bg-blue-400 text-white"
+    className: "bg-primary text-white"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "max-w-7xl px-2 sm:px-6 lg:px-8"
   }, /* @__PURE__ */ React.createElement("div", {

@@ -318,7 +318,6 @@ var Type = __importStar(type);
 exports.Type = Type;
 var Utils = __importStar(utils);
 exports.Utils = Utils;
-exports.default = Main;
 });
 
 var __pika_web_default_export_for_treeshaking__ = /*@__PURE__*/getDefaultExportFromCjs(dist);

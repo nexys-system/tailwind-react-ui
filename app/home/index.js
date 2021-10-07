@@ -24,7 +24,9 @@ export default () => {
     className: "text-xl text-blue-500 py-2"
   }, "Resources"), /* @__PURE__ */ React.createElement("p", null, /* @__PURE__ */ React.createElement(AHref, {
     link: "https://github.com/nexys-system/tailwind-react-ui"
-  }, /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(GitHub, null), " Github repository"))), /* @__PURE__ */ React.createElement("ul", {
+  }, /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(GitHub, {
+    svgProps: {stroke: "none", fill: "black"}
+  }), " Github repository"))), /* @__PURE__ */ React.createElement("ul", {
     className: "flex items-stretch "
   }, badges.map((badge, i) => /* @__PURE__ */ React.createElement("li", {
     key: i,
