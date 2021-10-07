@@ -5,7 +5,7 @@ on:
   # but only for the master branch
   push:
     branches:
-      - master
+      - "**" # matches every branch
 
 jobs:
   test:
@@ -19,4 +19,6 @@ jobs:
       - name: test
         run: yarn test
       - name: build
-        run: SNOWPACK_PUBLIC_URL=/tailwind-react-ui  yarn build
+        run: SNOWPACK_PUBLIC_URL=/tailwind-react-ui yarn build
+      - name: build package
+        run: yarn buildpackage
