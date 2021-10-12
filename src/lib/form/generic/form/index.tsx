@@ -10,7 +10,7 @@ import Spinner from "../../../components/loader/circular";
 
 import Generator from "./generator";
 
-const FormGenerator = <A, B>({
+const FormGenerator = <A,>({
   formDef,
   onSuccess,
   isLoading = false,

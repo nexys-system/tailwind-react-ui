@@ -1,8 +1,7 @@
-import { ContextColor } from "../type";
-import { IconProps } from "../../icons/type";
+import { ContextColor, ContextColorString } from "../type";
 
 export interface Style {
-  color: ContextColor;
+  color: ContextColor | ContextColorString;
 }
 
 export interface Props extends Partial<Style> {
