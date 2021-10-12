@@ -14,6 +14,8 @@ export enum ContextColor {
   white = "white",
 }
 
+export type ContextColorString = "primary" | "secondary" | "info" | "success" | "warning" | "error" |  "black" |  "white";
+
 export const contextBgColors = {
   [ContextColor.primary]: "bg-primary",
   [ContextColor.secondary]: "bg-secondary",
