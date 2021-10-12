@@ -159,8 +159,8 @@ export const ListWrapper = ({ children }: ListWrapperProps): JSX.Element => (
 export const ListContainer = ({
   children,
   maxHeight,
-  stickyHeader = false,
-}: ListContainerProps): JSX.Element => (
+}: //stickyHeader = false,
+ListContainerProps): JSX.Element => (
   <div className={"container"} style={maxHeight ? { maxHeight } : undefined}>
     <table className={"min-w-full divide-y divide-gray-200"}>{children}</table>
   </div>

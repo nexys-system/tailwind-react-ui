@@ -21,9 +21,7 @@ export const getIsImage = (contentType: string) =>
 export const getIsPdf = (contentType: string) =>
   contentType === "application/pdf";
 
-const Label = (props: Props) => {
-  const { file, onRemove, hideLabel } = props;
-
+const Label = ({ file, hideLabel }: Props) => {
   if (hideLabel) {
     return null;
   }
@@ -80,7 +78,7 @@ const Display = ({ file, onSend, width = widthDefault, height }: Props) => {
     const pfileBuffer: Promise<ArrayBuffer> = file.arrayBuffer();
     pfileBuffer.then((fileBuffer) => {
       const b64 = NUtils.buffer.arrayBufferTo64(fileBuffer);
-      onSend && onSend(b64).then((x) => setSendDisabled(false));
+      onSend && onSend(b64).then(() => setSendDisabled(false));
     });
   };
 

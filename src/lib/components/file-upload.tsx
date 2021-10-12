@@ -24,7 +24,7 @@ export default ({ promise }: { promise: any }) => {
       .then(() => {
         // Utils.confirmMessage(enqueueSnackbar, message, 'success');
       })
-      .catch((err: any) => {
+      .catch(() => {
         // Utils.confirmMessage(enqueueSnackbar, err.msg || errorMessage, 'error');
       })
       .finally(() => {

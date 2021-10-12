@@ -55,7 +55,7 @@ export default <A,>({
           <ActionButtonWrapper onClick={() => setEdit(false)}>
             <Close />
           </ActionButtonWrapper>
-          <Form<A, any>
+          <Form<A>
             valueDefault={data}
             formDef={def}
             onSuccess={handleSubmit}

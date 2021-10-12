@@ -1,4 +1,4 @@
-import { ContextColor } from "../type";
+import { ContextColor, ContextColorString } from "../type";
 import { IconProps } from "../../../lib/icons/type";
 
 export interface Style {

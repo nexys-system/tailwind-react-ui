@@ -1,5 +1,3 @@
-import { contextBgColors, contextTextColors } from "../type";
-import { Theme } from "../../context-provider/theme/type";
 import { PillStyle } from "./type";
 
 export const getPillClasses = (
