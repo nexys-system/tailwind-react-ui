@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Input from "../../text";
 
 import MenuWrapper from "../../../../components/popup-menu";
 import MenuItem from "./menu-item";
@@ -9,41 +8,35 @@ export default <A,>(props: {
   onSelect: (id: A) => void;
   onCancel: () => void;
   options: { id: A; name: string }[];
-  enableSearch?: boolean;
+  // enableSearch?: boolean;
+  searchString?: string;
 }) => {
-  const { open, onSelect, onCancel, enableSearch = false } = props;
-  const [search, setSearch] = useState<string>("");
+  const { open, onSelect, onCancel, searchString } = props;
   const [options, setOptions] = useState<{ id: A; name: string }[]>(
     props.options
   );
-  const handleSearch = (v: string | undefined) => {
-    setSearch(v || "");
-    setOptions(
-      [...props.options].filter(
-        (o) =>
-          v === "" ||
-          !v ||
-          o.name.trim().toLowerCase().startsWith(search.trim().toLowerCase())
-      )
-    );
-  };
+
+  const filteredOptions = options.filter(
+    (o) =>
+      !searchString ||
+      o.name.trim().toLowerCase().includes(searchString.trim().toLowerCase())
+  );
 
   return (
     <MenuWrapper open={open} onCancel={onCancel} position="top-10 left-0">
       <>
-        {enableSearch && (
-          <Input
-            value={search}
-            onChange={handleSearch}
-            placeholder="Search..."
-          />
+        {filteredOptions.length === 0 && (
+          <li
+            className={`flex flex-cols dark:hover:bg-coolGray-500 hover:bg-sky-100 py-2 px-4 block whitespace-no-wrap font-extralight dark:text-white`}
+          >
+            <i>No item found</i>
+          </li>
         )}
-        {options.map((o, i) => (
+        {filteredOptions.map((o, i) => (
           <MenuItem
             {...o}
             key={i}
             onSelect={(v) => {
-              setSearch("");
               setOptions(props.options);
               onSelect(v);
             }}
