@@ -14,6 +14,7 @@ export const Select = <A,>({
   disabled,
 }: T.SelectProps<A>) => {
   const [open, setOpen] = useState<boolean>(false);
+  const [searchString, setSearchString] = useState<string>("");
 
   const displayValue =
     value === undefined ? undefined : options.find((o) => o.id === value);
@@ -30,9 +31,9 @@ export const Select = <A,>({
   return (
     <div className="relative">
       <input
-        onChange={() => {}}
+        onChange={(e) => setSearchString(e.currentTarget.value)}
         onClick={() => setOpen(!open)}
-        value={displayValue && displayValue.name}
+        value={displayValue ? displayValue.name : searchString}
         disabled={disabled}
         className={getClasses(errors)}
       />
@@ -41,10 +42,10 @@ export const Select = <A,>({
       </span>
       <Menu
         onCancel={() => setOpen(false)}
-        enableSearch={options.length > 20}
         open={open}
         options={options}
         onSelect={handleChange}
+        searchString={searchString}
       />
     </div>
   );
