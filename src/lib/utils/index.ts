@@ -31,3 +31,17 @@ export const useWindowDimensions = () => {
 
 export const classNames = (...classes: string[]) =>
   classes.filter(Boolean).join(" ");
+
+export const saveByteArray = (
+  fileName: string,
+  byte: Buffer | string,
+  type: string = "application/text"
+) => {
+  const blob = new Blob([byte], { type });
+  const link = document.createElement("a");
+  link.href = window.URL.createObjectURL(blob);
+
+  //link.download = fileName;
+  link.setAttribute("download", fileName);
+  link.click();
+};
