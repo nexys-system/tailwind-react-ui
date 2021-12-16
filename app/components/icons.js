@@ -13,6 +13,7 @@ export default () => {
   }, "Icons"), /* @__PURE__ */ React.createElement("p", null, "Source: ", /* @__PURE__ */ React.createElement(AHref, {
     link: "https://heroicons.com/"
   }, "Heroicons")), /* @__PURE__ */ React.createElement("ul", null, Object.entries(Icons).sort(([k1], [k2]) => k1.localeCompare(k2)).map(([k, V]) => /* @__PURE__ */ React.createElement("li", {
+    key: k,
     onClick: () => handleClick(k)
   }, /* @__PURE__ */ React.createElement(V, null), " ", /* @__PURE__ */ React.createElement("code", {
     onMouseOver: () => setClipboard(k),

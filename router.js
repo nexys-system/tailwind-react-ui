@@ -8,9 +8,9 @@ export default () => {
     exact: true,
     path: links.home.link,
     component: Home
-  }), components.map(({link, Component}, i) => /* @__PURE__ */ React.createElement(Route, {
+  }), components.map(({link, Component, exact}, i) => /* @__PURE__ */ React.createElement(Route, {
     key: i,
-    exact: true,
+    exact: exact === void 0 ? true : exact,
     path: link,
     component: Component
   })), formComponents.map(({link, Component}, i) => /* @__PURE__ */ React.createElement(Route, {

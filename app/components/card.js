@@ -1,6 +1,6 @@
 import React from "../../_snowpack/pkg/react.js";
 import Typography from "../../lib/components/typography.js";
-import Card from "../../lib/components/card.js";
+import Card from "../../lib/components/card/index.js";
 import {Sun as Icon, Edit as EditIcon} from "../../lib/icons/index.js";
 const Right = () => {
   const [editShow, setEditShow] = React.useState(false);

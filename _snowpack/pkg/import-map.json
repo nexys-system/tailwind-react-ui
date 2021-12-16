@@ -1,7 +1,17 @@
 {
   "imports": {
+    "@headlessui/react": "./@headlessui/react.js",
     "@nexys/core-list": "./@nexys/core-list.js",
     "@nexys/core-list/dist/list/list-super": "./@nexys/core-list/dist/list/list-super.js",
+    "@nexys/react-bootstrap/dist/headless/crud": "./@nexys/react-bootstrap/dist/headless/crud.js",
+    "@nexys/react-bootstrap/dist/headless/crud/w-form ": "./@nexys/react-bootstrap/dist/headless/crud/w-form .js",
+    "@nexys/react-bootstrap/dist/headless/delete": "./@nexys/react-bootstrap/dist/headless/delete.js",
+    "@nexys/react-bootstrap/dist/headless/detail/utils": "./@nexys/react-bootstrap/dist/headless/detail/utils.js",
+    "@nexys/react-bootstrap/dist/headless/form/boolean": "./@nexys/react-bootstrap/dist/headless/form/boolean.js",
+    "@nexys/react-bootstrap/dist/headless/form/generator": "./@nexys/react-bootstrap/dist/headless/form/generator.js",
+    "@nexys/react-bootstrap/dist/headless/form/input-unit": "./@nexys/react-bootstrap/dist/headless/form/input-unit.js",
+    "@nexys/react-bootstrap/dist/headless/form/type": "./@nexys/react-bootstrap/dist/headless/form/type.js",
+    "@nexys/react-bootstrap/dist/headless/toggle/toggle": "./@nexys/react-bootstrap/dist/headless/toggle/toggle.js",
     "@nexys/utils": "./@nexys/utils.js",
     "@nexys/validation": "./@nexys/validation.js",
     "react": "./react.js",
