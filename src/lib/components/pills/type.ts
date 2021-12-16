@@ -28,3 +28,5 @@ export interface PillProps extends Partial<PillStyle> {
   fullWidth?: boolean;
 }
  */
+
+export default "snowpack";

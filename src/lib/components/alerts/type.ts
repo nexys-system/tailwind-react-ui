@@ -11,3 +11,5 @@ export interface Props extends Partial<Style> {
   dismissible?: boolean;
   onClick?: () => void;
 }
+
+export default "snowpack";

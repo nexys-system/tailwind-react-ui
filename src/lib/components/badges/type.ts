@@ -7,3 +7,5 @@ export interface Style {
 export interface Props extends Partial<Style> {
   children: string | JSX.Element;
 }
+
+export default "snowpack";

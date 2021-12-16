@@ -29,6 +29,7 @@ import Crud from "./app/components/crud";
 import Misc from "./app/components/misc";
 
 import Snippet from "./app/components/snippet";
+import ContextNotification from "./app/components/context/notification";
 
 import FormWrapper from "./app/form/wrapper";
 
@@ -67,6 +68,7 @@ export const components: (MenuItem & {
   { name: "View", link: "/view", Component: View },
   { name: "Snippets", link: "/snippets", Component: Snippet },
   { name: "Misc", link: "/misc", Component: Misc },
+  { name: "Context", link: "/context", Component: ContextNotification },
 ];
 
 export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
