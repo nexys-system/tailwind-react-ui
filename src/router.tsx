@@ -14,8 +14,13 @@ export default () => {
   return (
     <Switch>
       <Route exact path={links.home.link} component={Home} />
-      {components.map(({ link, Component }, i) => (
-        <Route key={i} exact path={link} component={Component} />
+      {components.map(({ link, Component, exact }, i) => (
+        <Route
+          key={i}
+          exact={exact === undefined ? true : exact}
+          path={link}
+          component={Component}
+        />
       ))}
       {formComponents.map(({ link, Component }, i) => (
         <Route key={i} exact path={link} component={Component} />

@@ -3,10 +3,10 @@ import React from "react";
 const Nav =
   (navs: { name: string }[]) =>
   ({
-    option,
+    option = 0,
     onClick,
   }: {
-    option: number;
+    option?: number;
     onClick: (option: number) => void;
   }) =>
     (

@@ -18,6 +18,7 @@ import Checkbox from "./app/form/checkbox";
 import Rating from "./app/form/rating";
 import DeleteRedirect from "./app/components/delete";
 import Edit from "./app/components/edit";
+import Tabs from "./app/components/tabs";
 import Toggle from "./app/components/toggle";
 import View from "./app/components/view";
 import FormGenerator from "./app/form/generator";
@@ -35,7 +36,10 @@ export const links: { [k: string]: MenuItem } = {
   home: { name: "Home", link: "/" },
 };
 
-export const components: (MenuItem & { Component: () => JSX.Element })[] = [
+export const components: (MenuItem & {
+  Component: () => JSX.Element;
+  exact?: boolean;
+})[] = [
   { name: "Alerts", link: "/alerts", Component: Alerts },
   { name: "Buttons", link: "/buttons", Component: Buttons },
   { name: "Badge", link: "/badge", Component: Badge },
@@ -52,6 +56,7 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Icons", link: "/icons", Component: Icons },
 
   { name: "Table", link: "/table", Component: Table },
+  { name: "Tabs", link: "/tabs", exact: false, Component: Tabs },
   { name: "Toggle", link: "/toggle", Component: Toggle },
   { name: "Typography", link: "/typography", Component: Typography },
   { name: "View", link: "/view", Component: View },
