@@ -1,11 +1,10 @@
 import React from "react";
 
-import { ContextProvider } from "../../../lib";
-import Provider from "./provider";
 import Typography from "../../../lib/components/typography";
+import { ContextProvider } from "../../../lib";
 
 const {
-  Notification: { Context, Type },
+  Notification: { Context, Type, Provider },
 } = ContextProvider;
 
 const Notifications = () => {

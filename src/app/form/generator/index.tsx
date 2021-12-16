@@ -1,11 +1,13 @@
 import React from "react";
 
-import Typography from "../../lib/components/typography";
-import * as FormGenerator from "../../lib/components/form/generic/generator";
+import Typography from "../../../lib/components/typography";
+import * as FormGenerator from "../../../lib/components/form/generic/generator";
 import {
   FormDef,
   FormType,
 } from "@nexys/react-bootstrap/dist/headless/form/type";
+
+import FormWContext from "./w-context";
 
 type Id = number;
 interface Data {
@@ -27,8 +29,13 @@ const onSuccess = (d: Data) => {
 export default () => {
   return (
     <>
-      <Typography>Form Generator</Typography>
+      <Typography variant="h2">Form Generator</Typography>
+      <Typography variant="h3">simple</Typography>
       <F onSuccess={onSuccess} />
+
+      <Typography variant="h3">with context</Typography>
+
+      <FormWContext />
     </>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 import FormGenerator from "@nexys/react-bootstrap/dist/headless/form/generator";
 import { FormDef } from "@nexys/react-bootstrap/dist/headless/form/type";
-import { Wrapper } from "../../index";
+import * as Wrapper from "../../wrapper";
 import FormUnit from "../input";
 
 const BtnSubmit = ({ isLoading }: { isLoading: boolean }) => (
