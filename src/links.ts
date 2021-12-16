@@ -16,6 +16,7 @@ import BooleanInput from "./app/form/switch";
 import SelectInput from "./app/form/select";
 import Checkbox from "./app/form/checkbox";
 import Rating from "./app/form/rating";
+import DeleteRedirect from "./app/components/delete";
 
 interface MenuItem {
   name: string;
@@ -32,6 +33,7 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Badge", link: "/badge", Component: Badge },
   { name: "Card", link: "/card", Component: Card },
   { name: "Data Load", link: "/data-load", Component: DataLoad },
+  { name: "Delete", link: "/delete", Component: DeleteRedirect },
   { name: "Dropdowns", link: "/dropdown", Component: Dropdowns },
   // { name: "Inputs", link: "/inputs", Component: Inputs },
   { name: "Pill", link: "/pill", Component: Pill },
