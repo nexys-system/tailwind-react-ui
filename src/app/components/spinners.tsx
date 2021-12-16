@@ -1,5 +1,5 @@
 import React from "react";
-import { CircularLoader, Loader } from "../../lib/components/loader";
+import { CircularLoader, Loader } from "../../lib/components/spinner";
 
 export default () => {
   return (

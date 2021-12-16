@@ -25,7 +25,7 @@ import {
   GlobalSearchProps,
 } from "@nexys/core-list/dist/list/ui-type";
 
-import LoaderMain from "../../loader/main";
+import LoaderMain from "../../spinner/main";
 import Layout from "./layout";
 import InputText from "../../../form/inputs/text";
 export { Layout };

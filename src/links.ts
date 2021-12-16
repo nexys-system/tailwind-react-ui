@@ -22,6 +22,7 @@ import Toggle from "./app/components/toggle";
 import View from "./app/components/view";
 import FormGenerator from "./app/form/generator";
 import TextareaInput from "./app/form/textarea";
+import List from "./app/components/list";
 
 import FormWrapper from "./app/form/wrapper";
 
@@ -44,6 +45,7 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Delete", link: "/delete", Component: DeleteRedirect },
   { name: "Dropdowns", link: "/dropdown", Component: Dropdowns },
   { name: "Edit", link: "/edit", Component: Edit },
+  { name: "List", link: "/list", Component: List },
   // { name: "Inputs", link: "/inputs", Component: Inputs },
   { name: "Pill", link: "/pill", Component: Pill },
   { name: "Spinners", link: "/spinner", Component: Spinner },

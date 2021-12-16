@@ -1,5 +1,5 @@
 export * as Notification from "./notification";
-export * as Loader from "./loader";
+export * as Loader from "./spinner";
 import * as Buttons from "./buttons";
 import * as Alerts from "./alerts";
 import * as Pills from "./pills";

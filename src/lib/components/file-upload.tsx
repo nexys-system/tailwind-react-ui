@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Spinner from "./loader/circular";
+import Spinner from "./spinner/circular";
 import { ChevronUp } from "../icons";
 
 export default ({ promise }: { promise: any }) => {
