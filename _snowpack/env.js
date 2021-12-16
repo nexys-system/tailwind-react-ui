@@ -1,5 +1,5 @@
-export const SNOWPACK_PUBLIC_GIT_SHA = "cc2548073ae0cdbe50aeb688c92d8a1557a59a6b";
-export const SNOWPACK_PUBLIC_VERSION = "v1.0.35";
+export const SNOWPACK_PUBLIC_GIT_SHA = "3afad23e76e5526c2a160ac8c008474962431b9f";
+export const SNOWPACK_PUBLIC_VERSION = "v1.1.0";
 export const SNOWPACK_PUBLIC_URL = "/tailwind-react-ui";
 export const MODE = "production";
 export const NODE_ENV = "production";
