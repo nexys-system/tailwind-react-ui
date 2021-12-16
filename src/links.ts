@@ -26,6 +26,7 @@ import TextareaInput from "./app/form/textarea";
 import List from "./app/components/list";
 import Detail from "./app/components/detail";
 import Crud from "./app/components/crud";
+import Misc from "./app/components/misc";
 
 import Snippet from "./app/components/snippet";
 
@@ -65,6 +66,7 @@ export const components: (MenuItem & {
   { name: "Typography", link: "/typography", Component: Typography },
   { name: "View", link: "/view", Component: View },
   { name: "Snippets", link: "/snippets", Component: Snippet },
+  { name: "Misc", link: "/misc", Component: Misc },
 ];
 
 export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
