@@ -1092,6 +1092,14 @@
   resolved "https://registry.yarnpkg.com/@nexys/core-list/-/core-list-0.0.5.tgz#1149ab4f0515132bc0cc09991d42d0a5c6343e40"
   integrity sha512-c7PDoPAXP0wxbI8fTh/5wpWRrbv7VdgZucM6bzeBqUR4DYvNnXOJ8SiQfZNdzAQeBCRkGX2hCxuyyVIBjyQhcA==
 
+"@nexys/react-bootstrap@^0.4.6":
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/@nexys/react-bootstrap/-/react-bootstrap-0.4.6.tgz#d51d383243ea482af47079e5e60e232c45c3a299"
+  integrity sha512-0zMGF/Yi6oi2dds1sjMHeolb/K6OiezC6PESoMCycPzBzJqfVtFMSHWGm6pT+0D0ozbIJ6X82RXaQ52tQm6bFA==
+  dependencies:
+    "@nexys/core-list" "^0.0.5"
+    "@nexys/validation" "^2.1.2"
+
 "@nexys/utils@^3.9.14":
   version "3.9.14"
   resolved "https://registry.yarnpkg.com/@nexys/utils/-/utils-3.9.14.tgz#db7e3581dd3f15990334842111be35d5aba443ca"
