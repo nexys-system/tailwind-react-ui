@@ -1,3 +1,4 @@
+// move to headless?
 export type TypeUnit = "string" | "number" | "category";
 
 export interface StructureUnit<A> {
