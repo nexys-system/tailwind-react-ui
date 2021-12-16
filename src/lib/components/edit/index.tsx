@@ -6,15 +6,16 @@ import { EditProps } from "@nexys/react-bootstrap/dist/headless/edit/type";
 const Edit =
   <A, Id = number>(
     Form: (a: FormProps<A>) => JSX.Element,
-    update: (data: Partial<A>, id: Id) => Promise<void>,
-    redirectUrl: string
+    update: (data: A, id: Id) => Promise<void>,
+    redirectUrl?: string
   ) =>
-  ({ id, data: dataIn, formOptions }: EditProps<A, Id>) => {
+  ({ id, data: dataIn, formOptions, postUpdate }: EditProps<A, Id>) => {
     const history = useHistory();
 
-    const handleSubmit = async (data: Partial<Omit<A, "id">>) => {
-      await update(data as any, id);
-      history.push(redirectUrl);
+    const handleSubmit = async (data: A) => {
+      await update(data, id);
+      redirectUrl && history.push(redirectUrl);
+      postUpdate && postUpdate(data);
     };
 
     return (

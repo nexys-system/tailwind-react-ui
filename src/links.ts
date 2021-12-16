@@ -18,8 +18,12 @@ import Checkbox from "./app/form/checkbox";
 import Rating from "./app/form/rating";
 import DeleteRedirect from "./app/components/delete";
 import Edit from "./app/components/edit";
+import Toggle from "./app/components/toggle";
+import View from "./app/components/view";
 import FormGenerator from "./app/form/generator";
 import TextareaInput from "./app/form/textarea";
+
+import FormWrapper from "./app/form/wrapper";
 
 interface MenuItem {
   name: string;
@@ -35,6 +39,7 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Buttons", link: "/buttons", Component: Buttons },
   { name: "Badge", link: "/badge", Component: Badge },
   { name: "Card", link: "/card", Component: Card },
+  { name: "Code", link: "/code", Component: Code },
   { name: "Data Load", link: "/data-load", Component: DataLoad },
   { name: "Delete", link: "/delete", Component: DeleteRedirect },
   { name: "Dropdowns", link: "/dropdown", Component: Dropdowns },
@@ -45,8 +50,9 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Icons", link: "/icons", Component: Icons },
 
   { name: "Table", link: "/table", Component: Table },
-  { name: "Code", link: "/code", Component: Code },
+  { name: "Toggle", link: "/toggle", Component: Toggle },
   { name: "Typography", link: "/typography", Component: Typography },
+  { name: "View", link: "/view", Component: View },
 ];
 
 export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
@@ -58,6 +64,7 @@ export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Rating", link: "/rating", Component: Rating },
   { name: "Form Generator", link: "/form-generator", Component: FormGenerator },
   { name: "Textarea", link: "/textarea", Component: TextareaInput },
+  { name: "Wrapper", link: "/wrapper", Component: FormWrapper },
 ];
 
 export const menus: MenuItem[] = Object.values(links);
