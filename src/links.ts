@@ -27,6 +27,8 @@ import List from "./app/components/list";
 import Detail from "./app/components/detail";
 import Crud from "./app/components/crud";
 
+import Snippet from "./app/components/snippet";
+
 import FormWrapper from "./app/form/wrapper";
 
 interface MenuItem {
@@ -62,6 +64,7 @@ export const components: (MenuItem & {
   { name: "Toggle", link: "/toggle", Component: Toggle },
   { name: "Typography", link: "/typography", Component: Typography },
   { name: "View", link: "/view", Component: View },
+  { name: "Snippets", link: "/snippets", Component: Snippet },
 ];
 
 export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
