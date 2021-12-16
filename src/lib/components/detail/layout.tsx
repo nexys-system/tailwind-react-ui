@@ -34,15 +34,23 @@ export const DetailLayout2 =
     );
   };
 
+const getId = <Id,>(paramType: T.ParamType, givenId?: Id): Id => {
+  if (givenId) {
+    return givenId;
+  }
+
+  const { id } = useParams<{ id?: string }>();
+
+  return getParamTyped<Id>(paramType, id);
+};
+
 const DetailLayout = <Id,>({
   backUrl,
   Detail,
-
+  id,
   paramType = "number",
-}: T.DetailLayoutProps<Id> & { paramType?: T.ParamType }) => {
-  const { id } = useParams<{ id?: string }>();
-
-  const nid = getParamTyped<Id>(paramType, id);
+}: T.DetailLayoutProps<Id> & { id?: Id; paramType?: T.ParamType }) => {
+  const nid = getId(paramType, id);
 
   return (
     <>

@@ -17,25 +17,25 @@ const DetailWLayout =
     Form: (a: FormProps<A>) => JSX.Element,
     viewFields: ViewField<A>[],
     { update, detail, deleteById, getOptions }: CrudRequestDetail<A, Id>,
-    redirectUrl: string,
+    redirectUrlDelete: string,
     showToggle: boolean = true,
     detailColWidth: number,
     extras?: ExtraUnit<A>[],
     editTitle?: string
   ) =>
-  ({ backUrl }: Omit<DetailLayoutProps<Id>, "Detail">) => {
+  ({ backUrl, id }: Omit<DetailLayoutProps<Id>, "Detail"> & { id?: Id }) => {
     const D = Detail(
       Form,
       viewFields,
       { update, detail, deleteById, getOptions },
-      redirectUrl,
+      redirectUrlDelete,
       showToggle,
       extras,
       detailColWidth,
       editTitle
     );
 
-    return <Layout backUrl={backUrl} Detail={D} />;
+    return <Layout backUrl={backUrl} Detail={D} id={id} />;
   };
 
 export default DetailWLayout;

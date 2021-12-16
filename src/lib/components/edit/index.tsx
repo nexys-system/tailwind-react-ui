@@ -13,7 +13,9 @@ const Edit =
     const history = useHistory();
 
     const handleSubmit = async (data: A) => {
+      console.log("before update");
       await update(data, id);
+      console.log("after update");
       redirectUrl && history.push(redirectUrl);
       postUpdate && postUpdate(data);
     };

@@ -24,6 +24,8 @@ import View from "./app/components/view";
 import FormGenerator from "./app/form/generator";
 import TextareaInput from "./app/form/textarea";
 import List from "./app/components/list";
+import Detail from "./app/components/detail";
+import Crud from "./app/components/crud";
 
 import FormWrapper from "./app/form/wrapper";
 
@@ -45,8 +47,10 @@ export const components: (MenuItem & {
   { name: "Badge", link: "/badge", Component: Badge },
   { name: "Card", link: "/card", Component: Card },
   { name: "Code", link: "/code", Component: Code },
+  { name: "Crud", link: "/crud", exact: false, Component: Crud },
   { name: "Data Load", link: "/data-load", Component: DataLoad },
   { name: "Delete", link: "/delete", Component: DeleteRedirect },
+  { name: "Detail", link: "/detail", Component: Detail },
   { name: "Dropdowns", link: "/dropdown", Component: Dropdowns },
   { name: "Edit", link: "/edit", Component: Edit },
   { name: "Icons", link: "/icons", Component: Icons },

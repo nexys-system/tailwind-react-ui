@@ -19,7 +19,7 @@ const Detail = <Id, A extends { id: Id }>(
   Form: (a: FormProps<A>) => JSX.Element,
   viewFields: ViewField<A>[],
   { update, detail, deleteById, getOptions }: CrudRequestDetail<A, Id>,
-  redirectUrl: string,
+  redirectUrlDelete: string,
   showToggle: boolean = true,
   extras?: ExtraUnit<A>[],
   detailColWidth: number = 6,
@@ -38,11 +38,11 @@ const Detail = <Id, A extends { id: Id }>(
   };
 
   const Delete = deleteById
-    ? DeleteGeneric<Id>(deleteById, redirectUrl)
+    ? DeleteGeneric<Id>(deleteById, redirectUrlDelete)
     : () => <></>;
 
   // define final view based on options chosen
-  const Main = getMain(showToggle, viewFields, Form, redirectUrl, update);
+  const Main = getMain(showToggle, viewFields, Form, update);
 
   getOptions && getOptions();
 
@@ -78,7 +78,6 @@ const getMain = <A, Id>(
   showToggle: boolean,
   viewFields: ViewField<A>[],
   Form: (a: FormProps<A>) => JSX.Element,
-  redirectUrl: string,
   update?: (data: Partial<A>, id: Id) => Promise<void>
 ): ((a: EditProps<A, Id>) => JSX.Element) => {
   const View = ViewGeneric<A>(viewFields);
@@ -86,7 +85,7 @@ const getMain = <A, Id>(
     return View;
   }
 
-  const Edit = EditGeneric<A, Id>(Form, update, redirectUrl);
+  const Edit = EditGeneric<A, Id>(Form, update);
 
   if (showToggle) {
     return ToggleGeneric<A, Id>(Edit, View);

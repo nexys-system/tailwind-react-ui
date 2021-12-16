@@ -31,6 +31,7 @@ const List = <A extends { id: Id }, Id>({
   editLink,
   config,
 }: ListProps<A, Id>) => {
+  console.log("vg");
   return (
     <ListLayout
       Table={({ data }) => (

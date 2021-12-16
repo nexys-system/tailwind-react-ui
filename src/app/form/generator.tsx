@@ -9,13 +9,15 @@ import {
 
 type Id = number;
 interface Data {
+  id: number;
   name: string;
 }
 
 const def: FormDef<Data, Id>[] = [
   { name: "name", uiType: FormType.Text, optional: false },
 ];
-const F = FormGenerator.FormWDef(def);
+
+export const F = FormGenerator.FormWDef(def);
 
 const onSuccess = (d: Data) => {
   alert(JSON.stringify(d));

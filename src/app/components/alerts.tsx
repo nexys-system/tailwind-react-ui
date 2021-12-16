@@ -3,11 +3,12 @@ import Alert from "../../lib/components/alerts/main";
 import { Speakerphone } from "../../lib/icons";
 
 import * as C from "../../lib/components/type";
+import Typography from "../../lib/components/typography";
 
 export default () => {
   return (
     <>
-      <h1>Alert</h1>
+      <Typography variant="h2">Alerts</Typography>
       <Alert>Primary alert (default)</Alert>
       <Alert color={C.ContextColor.secondary}>Secondary alert</Alert>
       <Alert color={C.ContextColor.info}>Info alert</Alert>
