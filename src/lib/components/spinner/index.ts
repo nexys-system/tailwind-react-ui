@@ -4,4 +4,4 @@ import Circle from "./circle";
 
 export { CircularLoader, Loader, Circle };
 
-export default Circle;
+export default CircularLoader;

@@ -49,12 +49,10 @@ export const components: (MenuItem & {
   { name: "Delete", link: "/delete", Component: DeleteRedirect },
   { name: "Dropdowns", link: "/dropdown", Component: Dropdowns },
   { name: "Edit", link: "/edit", Component: Edit },
+  { name: "Icons", link: "/icons", Component: Icons },
   { name: "List", link: "/list", Component: List },
-  // { name: "Inputs", link: "/inputs", Component: Inputs },
   { name: "Pill", link: "/pill", Component: Pill },
   { name: "Spinners", link: "/spinner", Component: Spinner },
-  { name: "Icons", link: "/icons", Component: Icons },
-
   { name: "Table", link: "/table", Component: Table },
   { name: "Tabs", link: "/tabs", exact: false, Component: Tabs },
   { name: "Toggle", link: "/toggle", Component: Toggle },
