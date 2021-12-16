@@ -16,18 +16,22 @@ const Card = ({
   style,
   className = formClass.join(" "),
   colSpan,
+  right,
 }: {
   title?: string;
   children: JSX.Element | JSX.Element[];
   style?: React.CSSProperties;
   className?: string;
   colSpan?: number;
+  right?: JSX.Element | JSX.Element[];
 }) => {
   return (
     <div
       style={style}
-      className={className + (colSpan ? " col-span-" + colSpan : "")}
+      className={className + (colSpan ? " col-span-" + colSpan : "")} //className={`w-full bg-white dark:bg-coolGray-600 dark:text-white rounded-xl shadow-md ${className} m-1`}
     >
+      {right && <div className={"float-right pr-4 pt-4"}>{right}</div>}
+      <div className="p-4"></div>
       {title && (
         <div className="uppercase tracking-wide text-sm text-primary font-semibold">
           {title}
