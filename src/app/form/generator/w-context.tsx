@@ -25,9 +25,11 @@ const def: FormDef<Data, Id>[] = [
 export const F = FormGenerator.FormWDef(def);
 
 const FormWContext = () => {
+  const [isLoading, setLoading] = React.useState<boolean>(false);
   const { setNotification } = Context.useToastContext();
 
   const onSuccess = async (d: Data) => {
+    setLoading(true);
     await U.promise.delay(2000);
 
     setNotification({
@@ -36,10 +38,11 @@ const FormWContext = () => {
       messageType: Type.MessageType.success,
     });
 
+    setLoading(false);
     return Promise.resolve();
   };
 
-  return <F onSuccess={onSuccess} />;
+  return <F onSuccess={onSuccess} isLoading={isLoading} />;
 };
 
 export default () => (

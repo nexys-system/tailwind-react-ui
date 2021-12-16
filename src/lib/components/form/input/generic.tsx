@@ -72,6 +72,8 @@ export const InputGeneric = <A,>({
     return onChange(value as any as A);
   };
 
+  console.log({ disabled }, 2);
+
   return (
     <input
       className={classArray.join(" ")}
