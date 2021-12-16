@@ -6,34 +6,29 @@ import { ViewField } from "@nexys/react-bootstrap/dist/headless/view/type";
 import ListInner from "../list";
 import DetailGeneric from "../detail/index";
 
-import * as CrudGeneric from "@nexys/react-bootstrap/dist/headless/crud/generic";
+import CrudGenericWForm from "@nexys/react-bootstrap/dist/headless/crud/w-form ";
 import {
   CrudRequest,
   ExtraUnit,
+  CrudOptions,
 } from "@nexys/react-bootstrap/dist/headless/crud/type";
 
-type Id = number;
-
-const Crud = <A extends { id: Id }>(
+const Crud = <A extends { id: Id }, Id>(
   def: Types.Definition<A>,
   Form: (p: FormProps<A>) => JSX.Element,
   viewFields: ViewField<A>[],
   urlPrefix: string,
   crud: CrudRequest<A, Id>,
-  editTitle: string = "Edit",
   extras?: ExtraUnit<A>[],
-  showEditToggle: boolean = true,
-  detailColWidth: number = 6
+  options?: CrudOptions
 ) =>
-  CrudGeneric.CrudGenericWForm<A, Id>(ListInner, DetailGeneric, Form)(
+  CrudGenericWForm<A, Id>(ListInner, DetailGeneric, Form)(
     def,
     viewFields,
     urlPrefix,
     crud,
-    showEditToggle,
-    detailColWidth,
     extras,
-    editTitle
+    options
   );
 
 export default Crud;
