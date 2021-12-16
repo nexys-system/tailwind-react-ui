@@ -1,13 +1,15 @@
 import React from "react";
-import { CircularLoader, Loader } from "../../lib/components/spinner";
+import { CircularLoader, Loader, Circle } from "../../lib/components/spinner";
+import Typography from "../../lib/components/typography";
 
 export default () => {
   return (
     <>
-      <h1>Spinner</h1>
+      <Typography variant={"h2"}>Spinner</Typography>
       <Loader />
 
       <CircularLoader />
+      <Circle />
     </>
   );
 };
