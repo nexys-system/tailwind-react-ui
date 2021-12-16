@@ -21,12 +21,14 @@ import Edit from "./app/components/edit.js";
 import Tabs from "./app/components/tabs.js";
 import Toggle from "./app/components/toggle.js";
 import View from "./app/components/view.js";
-import FormGenerator from "./app/form/generator.js";
+import FormGenerator from "./app/form/generator/index.js";
 import TextareaInput from "./app/form/textarea.js";
 import List from "./app/components/list/index.js";
 import Detail from "./app/components/detail.js";
 import Crud from "./app/components/crud.js";
+import Misc from "./app/components/misc.js";
 import Snippet from "./app/components/snippet.js";
+import ContextNotification from "./app/components/context/notification.js";
 import FormWrapper from "./app/form/wrapper.js";
 export const links = {
   home: {name: "Home", link: "/"}
@@ -52,7 +54,9 @@ export const components = [
   {name: "Toggle", link: "/toggle", Component: Toggle},
   {name: "Typography", link: "/typography", Component: Typography},
   {name: "View", link: "/view", Component: View},
-  {name: "Snippets", link: "/snippets", Component: Snippet}
+  {name: "Snippets", link: "/snippets", Component: Snippet},
+  {name: "Misc", link: "/misc", Component: Misc},
+  {name: "Context", link: "/context", Component: ContextNotification}
 ];
 export const formComponents = [
   {name: "Text Input", link: "/text-input", Component: TextInput},

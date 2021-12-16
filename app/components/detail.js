@@ -1,7 +1,7 @@
 import React from "../../_snowpack/pkg/react.js";
 import Typography from "../../lib/components/typography.js";
 import Detail from "../../lib/components/detail/index.js";
-import {F} from "../form/generator.js";
+import {F} from "../form/generator/simple.js";
 import V from "../../lib/components/view/index.js";
 export const viewItems = [["Name", "name"]];
 export const View = V(viewItems);
