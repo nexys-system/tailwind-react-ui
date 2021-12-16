@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 // needs to be replace with notifications context
 import { AppContext } from "../../context-provider/theme/context";
-import Spinner from "../loader/circular";
+import Spinner from "../spinner/circular";
 import { ButtonProps } from "./type";
 import * as Classes from "./classes";
 import { ContextColor } from "../type";

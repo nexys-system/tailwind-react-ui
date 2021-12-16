@@ -11,6 +11,7 @@ export default (props: {
   const wrapperClasses = `text-center relative ${className}`;
   const dotClasses = `h-${dotSize} w-${dotSize} ${dotClassName}`;
   const animationClasses = `inline-flex absolute h-${dotSize} w-${dotSize} rounded-full bg-primary opacity-75 `;
+
   return (
     <div className={wrapperClasses}>
       <span className={dotClasses}>

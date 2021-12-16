@@ -17,3 +17,5 @@ export interface ButtonProps extends Partial<ButtonStyle> {
   type?: ButtonType;
   isLoading?: boolean;
 }
+
+export default "snowpack";

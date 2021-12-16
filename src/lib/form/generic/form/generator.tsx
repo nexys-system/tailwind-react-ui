@@ -7,8 +7,13 @@ import * as T from "../type";
 
 import * as U from "../utils";
 
-export default <A extends { [k: string]: any }>(props: T.GeneratorProps<A>) => {
-  const { formDef, errors, data, setData, isLoading } = props;
+export default <A extends { [k: string]: any }>({
+  formDef,
+  errors,
+  data,
+  setData,
+  isLoading,
+}: T.GeneratorProps<A>) => {
   return (
     <>
       {formDef

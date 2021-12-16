@@ -1,5 +1,21 @@
 import IconFactorySVG from "./icon-factory";
 
+export const ArrowLeft = IconFactorySVG(
+  "M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+);
+
+export const ArrowRight = IconFactorySVG(
+  "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+);
+
+export const ArrowDown = IconFactorySVG(
+  "M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+);
+
+export const ArrowUp = IconFactorySVG(
+  "M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
+);
+
 export const CheckCircle = IconFactorySVG(
   "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
 );
@@ -17,6 +33,10 @@ export const ArrowCircleRight = IconFactorySVG(
 
 export const XCircle = IconFactorySVG(
   "M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+);
+
+export const Calendar = IconFactorySVG(
+  "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
 );
 
 export const Check = IconFactorySVG("M5 13l4 4L19 7");
@@ -73,6 +93,11 @@ export const Play = IconFactorySVG([
   "M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z",
   "M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
 ]);
+
+export const PlusCircle = IconFactorySVG([
+  "M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z",
+]);
+
 export const Qr = IconFactorySVG(
   "M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"
 );

@@ -25,7 +25,7 @@ export default () => {
         {Object.entries(Icons)
           .sort(([k1], [k2]) => k1.localeCompare(k2))
           .map(([k, V]) => (
-            <li onClick={() => handleClick(k)}>
+            <li key={k} onClick={() => handleClick(k)}>
               <V />{" "}
               <code
                 onMouseOver={() => setClipboard(k)}
