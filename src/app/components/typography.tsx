@@ -1,8 +1,6 @@
 import React from "react";
 import Typography from "../../lib/components/typography";
 
-import Typgography from "../../lib/components/typography";
-
 export default () => {
   return (
     <>

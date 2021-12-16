@@ -1,5 +1,5 @@
 import React from "react";
-import * as Inputs from "../../lib/form/inputs";
+import * as Inputs from "../../lib/components/form/input";
 export default () => {
   const [value, setValue] = React.useState<number | undefined>();
   return (

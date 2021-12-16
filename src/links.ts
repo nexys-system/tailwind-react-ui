@@ -18,6 +18,7 @@ import Checkbox from "./app/form/checkbox";
 import Rating from "./app/form/rating";
 import DeleteRedirect from "./app/components/delete";
 import Edit from "./app/components/edit";
+import FormGenerator from "./app/form/generator";
 
 interface MenuItem {
   name: string;
@@ -54,6 +55,7 @@ export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Switch", link: "/switch", Component: BooleanInput },
   { name: "Checkbox", link: "/checkbox", Component: Checkbox },
   { name: "Rating", link: "/rating", Component: Rating },
+  { name: "Form Generator", link: "/form-generator", Component: FormGenerator },
 ];
 
 export const menus: MenuItem[] = Object.values(links);
