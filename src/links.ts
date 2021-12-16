@@ -9,7 +9,7 @@ import Icons from "./app/components/icons";
 import Table from "./app/components/table";
 import Code from "./app/components/code";
 import Typography from "./app/components/typography";
-
+import DataLoad from "./app/components/data-load";
 import TextInput from "./app/form/text";
 import NumberInput from "./app/form/number";
 import BooleanInput from "./app/form/switch";
@@ -31,6 +31,7 @@ export const components: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Buttons", link: "/buttons", Component: Buttons },
   { name: "Badge", link: "/badge", Component: Badge },
   { name: "Card", link: "/card", Component: Card },
+  { name: "Data Load", link: "/data-load", Component: DataLoad },
   { name: "Dropdowns", link: "/dropdown", Component: Dropdowns },
   // { name: "Inputs", link: "/inputs", Component: Inputs },
   { name: "Pill", link: "/pill", Component: Pill },
