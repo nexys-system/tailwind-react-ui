@@ -3,7 +3,7 @@ import React from "react";
 import Typography from "../../lib/components/typography";
 import Detail from "../../lib/components/detail";
 
-import { F } from "../form/generator";
+import { F } from "../form/generator/simple";
 
 import V from "../../lib/components/view";
 

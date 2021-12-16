@@ -13,18 +13,62 @@ const {
 } = ContextProvider;
 
 type Id = number;
+
+enum DataCategory {
+  one = 1,
+  two = 2,
+  three = 3,
+}
+
+const isA = <A,>(x: any): x is A => typeof x === "number";
+
+const dataCategoryOptions = Object.values(DataCategory)
+  .filter(isA)
+  .map((id) => ({ id: id as number, name: DataCategory[id] }));
+
 interface Data {
-  id: number;
   name: string;
+  age: number;
+  cat: DataCategory;
+  catObject: { id: number };
+  isAccept: boolean;
 }
 
 const def: FormDef<Data, Id>[] = [
-  { name: "name", uiType: FormType.Text, optional: false },
+  { label: "Name", name: "name", uiType: FormType.Text, optional: false },
+  { name: "age", label: "Age", uiType: FormType.Number, optional: false },
+  {
+    name: "cat",
+    label: "Category",
+    uiType: FormType.Select,
+    optional: false,
+    options: dataCategoryOptions,
+  },
+  {
+    name: "catObject",
+    label: "Category 2",
+    uiType: FormType.SelectObject,
+    optional: false,
+    options: [
+      { id: 1, name: "cat #1" },
+      { id: 2, name: "cat #2" },
+    ],
+  },
+  {
+    name: "isAccept",
+    label: "Accept conditions",
+    uiType: FormType.Switch,
+    optional: false,
+  },
 ];
 
 export const F = FormGenerator.FormWDef(def);
 
-const FormWContext = () => {
+const FormWContext = ({
+  valueDefault = {},
+}: {
+  valueDefault: Partial<Data>;
+}) => {
   const [isLoading, setLoading] = React.useState<boolean>(false);
   const { setNotification } = Context.useToastContext();
 
@@ -42,11 +86,17 @@ const FormWContext = () => {
     return Promise.resolve();
   };
 
-  return <F onSuccess={onSuccess} isLoading={isLoading} />;
+  return (
+    <F
+      valueDefault={valueDefault}
+      onSuccess={onSuccess}
+      isLoading={isLoading}
+    />
+  );
 };
 
-export default () => (
+export default ({ valueDefault }: { valueDefault?: Partial<Data> }) => (
   <Provider>
-    <FormWContext />
+    <FormWContext valueDefault={valueDefault} />
   </Provider>
 );

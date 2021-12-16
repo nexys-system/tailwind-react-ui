@@ -1,41 +1,26 @@
 import React from "react";
 
 import Typography from "../../../lib/components/typography";
-import * as FormGenerator from "../../../lib/components/form/generic/generator";
-import {
-  FormDef,
-  FormType,
-} from "@nexys/react-bootstrap/dist/headless/form/type";
 
+import Simple from "./simple";
 import FormWContext from "./w-context";
 
-type Id = number;
-interface Data {
-  id: number;
-  name: string;
-}
+export default () => (
+  <>
+    <Typography variant="h2">Form Generator</Typography>
+    <Typography variant="h3">simple</Typography>
+    <Simple />
 
-const def: FormDef<Data, Id>[] = [
-  { name: "name", uiType: FormType.Text, optional: false },
-];
+    <Typography variant="h3">with context</Typography>
 
-export const F = FormGenerator.FormWDef(def);
+    <FormWContext />
 
-const onSuccess = (d: Data) => {
-  alert(JSON.stringify(d));
-  return Promise.resolve();
-};
+    <Typography variant="h3">
+      with context and (partial) default values
+    </Typography>
 
-export default () => {
-  return (
-    <>
-      <Typography variant="h2">Form Generator</Typography>
-      <Typography variant="h3">simple</Typography>
-      <F onSuccess={onSuccess} />
-
-      <Typography variant="h3">with context</Typography>
-
-      <FormWContext />
-    </>
-  );
-};
+    <FormWContext
+      valueDefault={{ age: 9, isAccept: true, cat: 3, catObject: { id: 2 } }}
+    />
+  </>
+);
