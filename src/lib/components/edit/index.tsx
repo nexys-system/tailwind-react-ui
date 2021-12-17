@@ -11,17 +11,20 @@ const Edit =
   ) =>
   ({ id, data: dataIn, formOptions, postUpdate }: EditProps<A, Id>) => {
     const history = useHistory();
-
+    const [isLoading, setIsLoading] = React.useState<boolean>(false);
     const handleSubmit = async (data: A) => {
-      console.log("before update");
+      setIsLoading(true);
       await update(data, id);
-      console.log("after update");
+
       redirectUrl && history.push(redirectUrl);
       postUpdate && postUpdate(data);
+
+      setIsLoading(false);
     };
 
     return (
       <Form
+        isLoading={isLoading}
         valueDefault={dataIn}
         onSuccess={handleSubmit}
         options={formOptions}

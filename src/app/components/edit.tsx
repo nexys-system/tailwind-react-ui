@@ -3,9 +3,11 @@ import PEdit from "../../lib/components/edit";
 import Typography from "../../lib/components/typography";
 import { FormProps } from "@nexys/react-bootstrap/dist/headless/form/type";
 import InputText from "../../lib/form/inputs/text";
-import * as Buttons from "../../lib/components/buttons";
+import { ContextProvider } from "../../lib";
 
-const homeLink = "/";
+const {
+  Notification: { Context, Type },
+} = ContextProvider;
 
 interface Data {
   name: string;
@@ -38,17 +40,26 @@ const Form = ({ valueDefault, onSuccess }: FormProps<Data>) => {
 
 const update = async (_data: Partial<Data>) => Promise.resolve(undefined);
 
-const E = PEdit<Data, string>(Form, update, homeLink);
-
 export const Edit = PEdit<Data, string>(Form, update);
 
-export default () => (
-  <>
-    <Typography variant={"h2"}>Edit</Typography>
-    <E
-      id={"myuuid"}
-      data={{ name: "my default name" }}
-      postUpdate={() => console.log("s")}
-    />
-  </>
-);
+const EditFinal = () => {
+  const { setNotification } = Context.useToastContext();
+  return (
+    <>
+      <Typography variant={"h2"}>Edit</Typography>
+      <Edit
+        id={"myuuid"}
+        data={{ name: "my default name" }}
+        postUpdate={() =>
+          setNotification({
+            text: "hello",
+            type: Type.NotificationType.toast,
+            messageType: Type.MessageType.info,
+          })
+        }
+      />
+    </>
+  );
+};
+
+export default EditFinal;

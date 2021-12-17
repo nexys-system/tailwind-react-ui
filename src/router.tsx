@@ -4,14 +4,20 @@ import { Route, Switch } from "react-router-dom";
 import { links, components, formComponents } from "./links";
 import Home from "./app/home";
 
+import { ContextProvider } from "./lib";
+
+const {
+  Notification: { Context, Type },
+} = ContextProvider;
+
 const NotFound = () => (
   <p>
     <i>Page Not Found</i>
   </p>
 );
 
-export default () => {
-  return (
+export default () => (
+  <ContextProvider.Notification.Provider>
     <Switch>
       <Route exact path={links.home.link} component={Home} />
       {components.map(({ link, Component, exact }, i) => (
@@ -27,5 +33,5 @@ export default () => {
       ))}
       <Route component={NotFound} />
     </Switch>
-  );
-};
+  </ContextProvider.Notification.Provider>
+);
