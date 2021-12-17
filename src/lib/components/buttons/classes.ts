@@ -32,7 +32,7 @@ export const get = (
     if (!disabled && !isLoading) {
       classArray.push(
         theme === "dark"
-          ? "hover:shadow-primary"
+          ? "hover:shadow"
           : "shadow-sm focus:shadow-md hover:shadow-lg"
       );
     }

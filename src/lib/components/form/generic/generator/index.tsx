@@ -2,19 +2,17 @@ import React from "react";
 
 import FormGenerator from "@nexys/react-bootstrap/dist/headless/form/generator";
 import { FormDef } from "@nexys/react-bootstrap/dist/headless/form/type";
-import * as Wrapper from "../../wrapper";
+import * as Wrapper from "../../../form/wrapper";
 import FormUnit from "../input";
 import * as Loader from "../../../spinner";
 
+import Button from "../../../buttons/main";
+
 const BtnSubmit = ({ isLoading }: { isLoading: boolean }) => {
   if (isLoading) {
-    return <Loader.CircularLoader />;
+    return <Loader.Loader />;
   }
-  return (
-    <button type="submit" className={"border rounded border-blue-800 p-2"}>
-      Submit
-    </button>
-  );
+  return <Button type="submit">Submit</Button>;
 };
 
 export const FormWDef = <A,>(formDef: FormDef<A>[]) =>

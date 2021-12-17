@@ -45,13 +45,13 @@ const Alert = ({
 export const GlobalSearch = ({ onChange, filters }: GlobalSearchProps) => (
   <InputText
     value={filters && filters["globalSearch"]}
-    placeholder={"search"}
+    placeholder={"Search..."}
     onChange={(value) => onChange({ name: "globalSearch", value: value || "" })}
   />
 );
 
-export const PopoverFilter = () => <></>;
-export const FilterUnit = () => <></>;
+// export const PopoverFilter = () => <></>;
+// export const FilterUnit = () => <></>;
 
 export const NoRow = (props: NoRowProps): JSX.Element | null => {
   if (props.n > 0) {
@@ -162,7 +162,9 @@ export const ListContainer = ({
 }: //stickyHeader = false,
 ListContainerProps): JSX.Element => (
   <div className={"container"} style={maxHeight ? { maxHeight } : undefined}>
-    <table className={"min-w-full divide-y divide-gray-200"}>{children}</table>
+    <table className={"min-w-full divide-y divide-gray-200 table-auto w-full"}>
+      {children}
+    </table>
   </div>
 );
 

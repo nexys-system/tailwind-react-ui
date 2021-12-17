@@ -2,14 +2,13 @@ import React from "react";
 
 import HeadlessDelete from "@nexys/react-bootstrap/dist/headless/delete";
 
+import Button from "../components/buttons/main";
+
 const DeleteBtn = ({ onClick }: { onClick: () => void }) => {
   return (
-    <button
-      onClick={onClick}
-      className={"border  rounded text-red-700 border-red-700 p-2"}
-    >
+    <Button onClick={onClick} color="error">
       Delete
-    </button>
+    </Button>
   );
 };
 
