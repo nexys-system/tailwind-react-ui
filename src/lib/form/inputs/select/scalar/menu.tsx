@@ -27,7 +27,7 @@ export default <A,>(props: {
       <>
         {filteredOptions.length === 0 && (
           <li
-            className={`flex flex-cols dark:hover:bg-coolGray-500 hover:bg-sky-100 py-2 px-4 block whitespace-no-wrap font-extralight dark:text-white`}
+            className={`flex flex-cols dark:hover:bg-coolGray-500 hover:bg-primary-100 py-2 px-4 block whitespace-no-wrap font-extralight dark:text-white`}
           >
             <i>No item found</i>
           </li>

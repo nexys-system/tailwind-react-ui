@@ -1,13 +1,16 @@
+import { contextBdRadius } from "../type";
 import { PillStyle } from "./type";
 
 export const getPillClasses = (
-  { color }: PillStyle,
+  { color, rounded }: PillStyle,
   selected: boolean,
   fullWidth: boolean = true
 ): string[] => {
   const basic = [
     "cursor-pointer leading-none inline-flex items-center m-1",
-    "dark:text-white rounded-full p-2 shadow font-extralight",
+    "dark:text-white  p-2 shadow font-extralight",
+
+    rounded ? contextBdRadius[rounded] : "rounded-surface",
   ];
   const border = [`border border-${color} dark:border-${color}-700`];
   const bg = [
@@ -16,5 +19,8 @@ export const getPillClasses = (
       : `bg-white dark:bg-${color}-500  hover:bg-${color}-100 dark:hover:bg-${color}-400`,
   ];
   const width = [`${fullWidth && "w-full"}`];
+
+  console.log(basic);
+  console.log(rounded);
   return [...basic, ...border, ...bg, ...width];
 };

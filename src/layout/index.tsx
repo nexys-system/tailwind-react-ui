@@ -11,18 +11,17 @@ const rightNCols = nCols - leftNCols;
 // col-span-7 col-span-8
 export default ({ children }: { children: JSX.Element }) => {
   return (
-    <div className="flex flex-col h-screen justify-between font-extralight">
+    <div className="d-flex flex-column font-extralight">
       <Header />
 
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-4">
+      <main className="flex flex-no-wrap content-area overflow-scroll">
+        <Sidebar />
+        <div className="container mx-auto px-4 py-4 ">
           <div className={"grid grid-cols-8 gap-4"}>
-            <Sidebar />
             <div className={"col-span-" + rightNCols}>{children}</div>
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );

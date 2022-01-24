@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as FormGenerator from "../../../lib/components/form/generic/generator";
+import * as FormGenerator from "../../../lib/form/generic-2/generator";
 import {
   FormDef,
   FormType,

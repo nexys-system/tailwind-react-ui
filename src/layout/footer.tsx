@@ -2,7 +2,7 @@ import React from "react";
 import { github, version } from "../config";
 
 export default () => (
-  <footer className="h-10 px-10">
+  <footer className="h-10 px-10  float-right ">
     <p>
       <small>
         <a href={github.sha}>{version}</a>

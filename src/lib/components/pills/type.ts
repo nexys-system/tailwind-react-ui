@@ -1,9 +1,15 @@
-import { ContextColor } from "../type";
+import {
+  ContextBorderRadius,
+  ContextBorderRadiusString,
+  ContextColor,
+  ContextColorString,
+} from "../type";
 
 export type ButtonType = "button" | "submit" | "reset";
 
 export interface PillStyle {
-  color: ContextColor;
+  color: ContextColor | ContextColorString;
+  rounded?: ContextBorderRadius | ContextBorderRadiusString;
 }
 
 export interface PillProps extends Partial<PillStyle> {
@@ -15,18 +21,5 @@ export interface PillProps extends Partial<PillStyle> {
   fullWidth?: boolean;
   selected: boolean;
 }
-
-/**
- * interface Props {
-  id: number;
-  title: string;
-  badge?: string | JSX.Element;
-  selected?: boolean;
-  onSelect?: (s: number) => void;
-  color?: "sky" | "rose" | "purple" | "blue" | "coolGray";
-  darkColor?: "sky" | "rose" | "purple" | "blue" | "coolGray" | "white";
-  fullWidth?: boolean;
-}
- */
 
 export default "snowpack";

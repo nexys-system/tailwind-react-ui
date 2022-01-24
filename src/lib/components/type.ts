@@ -14,7 +14,33 @@ export enum ContextColor {
   white = "white",
 }
 
-export type ContextColorString = "primary" | "secondary" | "info" | "success" | "warning" | "error" |  "black" |  "white";
+export enum ContextBorderRadius {
+  none = "none",
+  sm = "sm",
+  md = "md",
+  lg = "lg",
+  full = "full",
+}
+
+export type ContextBorderRadiusString = "none" | "sm" | "md" | "lg" | "full";
+
+export const contextBdRadius = {
+  [ContextBorderRadius.none]: "rounded-none",
+  [ContextBorderRadius.sm]: "rounded-sm",
+  [ContextBorderRadius.md]: "rounded-md",
+  [ContextBorderRadius.lg]: "rounded-lg",
+  [ContextBorderRadius.full]: "rounded-full",
+};
+
+export type ContextColorString =
+  | "primary"
+  | "secondary"
+  | "info"
+  | "success"
+  | "warning"
+  | "error"
+  | "black"
+  | "white";
 
 export const contextBgColors = {
   [ContextColor.primary]: "bg-primary",

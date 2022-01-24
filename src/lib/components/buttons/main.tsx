@@ -14,6 +14,7 @@ export default ({
   disabled = false,
   color = ContextColor.primary,
   textColor = ContextColor.white,
+  rounded,
   variant = "filled",
   isLoading = false,
 }: ButtonProps) => {
@@ -26,7 +27,7 @@ export default ({
   };
 
   const classArray: string[] = Classes.get(
-    { color, textColor, variant },
+    { color, textColor, variant, rounded },
     disabled,
     isLoading,
     theme

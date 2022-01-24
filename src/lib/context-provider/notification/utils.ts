@@ -16,12 +16,12 @@ export const mapTypeToTitle = (t: MessageType): string => {
 export const mapTypeToColor = (t: MessageType): string => {
   switch (t) {
     case MessageType.success:
-      return "green";
+      return "success";
     case MessageType.warning:
-      return "yellow";
+      return "warning";
     case MessageType.error:
-      return "rose";
+      return "error";
     case MessageType.info:
-      return "sky";
+      return "primary";
   }
 };

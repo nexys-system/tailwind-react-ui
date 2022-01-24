@@ -1,10 +1,15 @@
-import { ContextColor, ContextColorString } from "../type";
+import {
+  ContextBorderRadius,
+  ContextBorderRadiusString,
+  ContextColor,
+  ContextColorString,
+} from "../type";
 
 export type ButtonType = "button" | "submit" | "reset";
 
 export interface ButtonStyle {
   color: ContextColor;
-  //shade: number;
+  rounded?: ContextBorderRadius | ContextBorderRadiusString;
   textColor: ContextColor | ContextColorString;
   variant: "filled" | "transparent";
 }

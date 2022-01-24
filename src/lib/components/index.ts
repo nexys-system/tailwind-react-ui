@@ -4,6 +4,7 @@ import * as Buttons from "./buttons";
 import * as Alerts from "./alerts";
 import * as Pills from "./pills";
 import * as Badges from "./badges";
+import * as Modal from "./modal";
 
 import AppTitle from "./app-title";
 
@@ -33,6 +34,7 @@ export {
   Card,
   Chevron,
   FileUpload,
+  Modal,
   Pills,
   Pill,
   PopupMenu,

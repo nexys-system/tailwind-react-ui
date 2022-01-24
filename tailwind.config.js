@@ -24,6 +24,20 @@ module.exports = {
     width: ["hover", "focus"],
   },
   theme: {
+    borderRadius: {
+      // default values
+      none: "0",
+      sm: "0.125rem",
+      DEFAULT: "0.25rem",
+      md: "0.375rem",
+      lg: "0.5rem",
+      full: "9999px",
+      large: "12px",
+      // custom value
+      surface: "0", // components like card, alert, badge etc.
+      button: "0.125rem",
+      input: "0",
+    },
     minWidth: {
       64: "16rem",
     },
@@ -38,6 +52,7 @@ module.exports = {
         ping200: "ping 1s infinite 200ms",
         ping300: "ping 1s infinite 300ms",
       },
+      rounded: {},
       colors: {
         primary: {
           ...colors.sky,
