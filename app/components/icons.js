@@ -1,6 +1,6 @@
 import React from "../../_snowpack/pkg/react.js";
 import * as Icons from "../../lib/icons/index.js";
-import AHref from "../../lib/components/link.js";
+import {External} from "../../lib/components/link/index.js";
 export default () => {
   const [showClipboard, setClipboard] = React.useState();
   const handleClick = async (name) => {
@@ -10,8 +10,8 @@ export default () => {
   };
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("h1", {
     className: "p-2 text-2xl"
-  }, "Icons"), /* @__PURE__ */ React.createElement("p", null, "Source: ", /* @__PURE__ */ React.createElement(AHref, {
-    link: "https://heroicons.com/"
+  }, "Icons"), /* @__PURE__ */ React.createElement("p", null, "Source: ", /* @__PURE__ */ React.createElement(External, {
+    url: "https://heroicons.com/"
   }, "Heroicons")), /* @__PURE__ */ React.createElement("ul", null, Object.entries(Icons).sort(([k1], [k2]) => k1.localeCompare(k2)).map(([k, V]) => /* @__PURE__ */ React.createElement("li", {
     key: k,
     onClick: () => handleClick(k)

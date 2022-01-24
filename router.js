@@ -1,6 +1,6 @@
 import React from "./_snowpack/pkg/react.js";
 import {Route, Switch} from "./_snowpack/pkg/react-router-dom.js";
-import {links, components, formComponents} from "./links.js";
+import {links, components, formComponents, crud, specs} from "./links.js";
 import Home from "./app/home/index.js";
 import {ContextProvider} from "./lib/index.js";
 const {
@@ -16,7 +16,17 @@ export default () => /* @__PURE__ */ React.createElement(ContextProvider.Notific
   exact: exact === void 0 ? true : exact,
   path: link,
   component: Component
+})), crud.map(({link, Component, exact}, i) => /* @__PURE__ */ React.createElement(Route, {
+  key: i,
+  exact: exact === void 0 ? true : exact,
+  path: link,
+  component: Component
 })), formComponents.map(({link, Component}, i) => /* @__PURE__ */ React.createElement(Route, {
+  key: i,
+  exact: true,
+  path: link,
+  component: Component
+})), specs.map(({link, Component}, i) => /* @__PURE__ */ React.createElement(Route, {
   key: i,
   exact: true,
   path: link,

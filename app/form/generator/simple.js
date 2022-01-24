@@ -1,5 +1,5 @@
 import React from "../../../_snowpack/pkg/react.js";
-import * as FormGenerator from "../../../lib/components/form/generic/generator/index.js";
+import * as FormGenerator from "../../../lib/form/generic-2/generator/index.js";
 import {
   FormType
 } from "../../../_snowpack/pkg/@nexys/react-bootstrap/dist/headless/form/type.js";

@@ -3,6 +3,7 @@ import PEdit from "../../lib/components/edit/index.js";
 import Typography from "../../lib/components/typography.js";
 import InputText from "../../lib/form/inputs/text.js";
 import {ContextProvider} from "../../lib/index.js";
+import Button from "../../lib/components/buttons/main.js";
 const {
   Notification: {Context, Type}
 } = ContextProvider;
@@ -17,9 +18,8 @@ const Form = ({valueDefault, onSuccess}) => {
   }, /* @__PURE__ */ React.createElement(InputText, {
     value: value.name,
     onChange: (name) => setValue({...value, name})
-  }), /* @__PURE__ */ React.createElement("button", {
-    type: "submit",
-    className: "rounded text-primary border border-primary p-2"
+  }), /* @__PURE__ */ React.createElement(Button, {
+    type: "submit"
   }, "Submit"));
 };
 const update = async (_data) => Promise.resolve(void 0);
