@@ -29,7 +29,7 @@ import Crud from "./app/components/crud";
 import Misc from "./app/components/misc";
 import Modal from "./app/components/modal";
 import Link from "./app/components/link";
-import Stepper from "./app/components/stepper";
+// import Stepper from "./app/components/stepper";
 
 import Snippet from "./app/components/snippet";
 import ContextNotification from "./app/components/context/notification";
@@ -67,7 +67,7 @@ export const components: (MenuItem & {
   { name: "Misc", link: "/misc", Component: Misc },
   { name: "Links", link: "/link", Component: Link },
   { name: "Context", link: "/context", Component: ContextNotification },
-  { name: "Stepper", link: "/stepper", Component: Stepper },
+  // { name: "Stepper", link: "/stepper", Component: Stepper },
 ];
 
 export const crud: (MenuItem & {
