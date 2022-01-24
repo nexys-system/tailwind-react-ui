@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Filter, OptionUnit } from "@nexys/core-list/dist/types/filter";
-import { GlobalSearch } from "./";
+// import { GlobalSearch } from "./";
 import PopoverFilter from "./popover-unit";
 import Checkbox from "../../../form/inputs/boolean/checkbox";
 import Radio from "../../../form/inputs/radio";
@@ -125,7 +125,7 @@ const FilterUnit = <A,>(props: FilterUnitProps<A>): JSX.Element | null => {
           {/* <FormControl component="fieldset">
             <RadioGroup aria-label={name.toString()} value={value}> */}
           {options &&
-            options.map((option, i) => (
+            options.map((option) => (
               <Radio
                 id={option.key}
                 label={option.value}

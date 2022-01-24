@@ -240,7 +240,7 @@ interface Props {
           </div>
  */
 
-const Step = ({ title, Icon, idx, active, passed, last }: StepInternal) => {
+const Step = ({ title, Icon, active, passed, last }: StepInternal) => {
   return (
     <>
       <div className="flex items-center text-primary relative">

@@ -28,7 +28,7 @@ import React from "react";
 import { Popover, ArrowContainer } from "react-tiny-popover";
 import * as Icons from "../../../icons";
 
-interface PopoverFilterProps<A> {
+interface PopoverFilterProps<_A> {
   children: React.ReactNode | JSX.Element;
   onReset: () => void;
   isActive?: boolean;

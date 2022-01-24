@@ -8,7 +8,7 @@ import {
 export type ButtonType = "button" | "submit" | "reset";
 
 export interface ButtonStyle {
-  color: ContextColor;
+  color: ContextColor | ContextColorString;
   rounded?: ContextBorderRadius | ContextBorderRadiusString;
   textColor: ContextColor | ContextColorString;
   variant: "filled" | "transparent";
