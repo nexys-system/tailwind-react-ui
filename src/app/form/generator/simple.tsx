@@ -1,13 +1,12 @@
 import React from "react";
 
-import Typography from "../../../lib/components/typography";
-import * as FormGenerator from "../../../lib/components/form/generic/generator";
+import * as FormGenerator from "../../../lib/form/generic-2/generator";
 import {
   FormDef,
   FormType,
 } from "@nexys/react-bootstrap/dist/headless/form/type";
 
-import FormWContext from "./w-context";
+// import FormWContext from "./w-context";
 
 type Id = number;
 interface Data {

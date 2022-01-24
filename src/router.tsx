@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import { links, components, formComponents } from "./links";
+import { links, components, formComponents, crud, specs } from "./links";
 import Home from "./app/home";
 
 import { ContextProvider } from "./lib";
@@ -28,7 +28,18 @@ export default () => (
           component={Component}
         />
       ))}
+      {crud.map(({ link, Component, exact }, i) => (
+        <Route
+          key={i}
+          exact={exact === undefined ? true : exact}
+          path={link}
+          component={Component}
+        />
+      ))}
       {formComponents.map(({ link, Component }, i) => (
+        <Route key={i} exact path={link} component={Component} />
+      ))}
+      {specs.map(({ link, Component }, i) => (
         <Route key={i} exact path={link} component={Component} />
       ))}
       <Route component={NotFound} />

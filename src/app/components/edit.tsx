@@ -4,6 +4,7 @@ import Typography from "../../lib/components/typography";
 import { FormProps } from "@nexys/react-bootstrap/dist/headless/form/type";
 import InputText from "../../lib/form/inputs/text";
 import { ContextProvider } from "../../lib";
+import Button from "../../lib/components/buttons/main";
 
 const {
   Notification: { Context, Type },
@@ -28,12 +29,7 @@ const Form = ({ valueDefault, onSuccess }: FormProps<Data>) => {
         onChange={(name) => setValue({ ...value, name })}
       />
 
-      <button
-        type="submit"
-        className="rounded text-primary border border-primary p-2"
-      >
-        Submit
-      </button>
+      <Button type="submit">Submit</Button>
     </form>
   );
 };

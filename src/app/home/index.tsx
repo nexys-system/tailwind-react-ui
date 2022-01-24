@@ -1,6 +1,6 @@
 import React from "react";
 
-import AHref from "../../lib/components/link";
+import { External } from "../../lib/components/link";
 import { Statement } from "../../lib/components/code";
 import { GitHub } from "../../lib/icons";
 
@@ -18,33 +18,33 @@ const badges = [
 export default () => {
   return (
     <>
-      <h1 className={"text-2xl text-blue-500 py-2"}>React Tailwind UI</h1>
+      <h1 className={"text-2xl text-primary py-2"}>React Tailwind UI</h1>
       <p>Collection of React components for tailwind.</p>
 
-      <h3 className={"text-xl text-blue-500 py-2"}>Get Started</h3>
+      <h3 className={"text-xl text-primary py-2"}>Get Started</h3>
 
       <Statement
         code={"yarn add @nexys/tailwind-react-ui"}
         copyToClipboard={true}
       />
 
-      <h3 className={"text-xl text-blue-500 py-2"}>Resources</h3>
+      <h3 className={"text-xl text-primary py-2"}>Resources</h3>
 
       <p>
-        <AHref link={"https://github.com/nexys-system/tailwind-react-ui"}>
+        <External url={"https://github.com/nexys-system/tailwind-react-ui"}>
           <>
             <GitHub svgProps={{ stroke: "none", fill: "black" }} /> Github
             repository
           </>
-        </AHref>
+        </External>
       </p>
 
       <ul className={"flex items-stretch "}>
         {badges.map((badge, i) => (
           <li key={i} className={"p-1"}>
-            <AHref target={"_blank"} link={badge[1]}>
+            <External url={badge[1]}>
               <img src={badge[0]} />
-            </AHref>
+            </External>
           </li>
         ))}
       </ul>
@@ -53,9 +53,9 @@ export default () => {
       <ul>
         <li>
           Tailwind official website:{" "}
-          <AHref link={"https://tailwindcss.com/"}>
+          <External url={"https://tailwindcss.com/"}>
             https://tailwindcss.com/
-          </AHref>
+          </External>
         </li>
       </ul>
     </>

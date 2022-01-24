@@ -1,7 +1,7 @@
 import React from "react";
 
 import * as Icons from "../../lib/icons";
-import AHref from "../../lib/components/link";
+import { External } from "../../lib/components/link";
 
 export default () => {
   const [showClipboard, setClipboard] = React.useState<string | undefined>();
@@ -18,7 +18,7 @@ export default () => {
       <h1 className={"p-2 text-2xl"}>Icons</h1>
 
       <p>
-        Source: <AHref link={"https://heroicons.com/"}>Heroicons</AHref>
+        Source: <External url={"https://heroicons.com/"}>Heroicons</External>
       </p>
 
       <ul>

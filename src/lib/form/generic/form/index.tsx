@@ -6,7 +6,6 @@ import * as V from "@nexys/validation";
 import * as U from "../utils";
 
 import Button from "../../../components/buttons/main";
-import Spinner from "../../../components/spinner/circular";
 
 import Generator from "./generator";
 
@@ -61,16 +60,8 @@ const FormGenerator = <A,>({
         setData={setData}
       />
 
-      <Button disabled={isLoading} type="submit">
-        <>
-          {isLoading && (
-            <span className="flex flex-inline">
-              <Spinner /> Loading
-            </span>
-          )}
-
-          {!isLoading && submit.label}
-        </>
+      <Button isLoading={isLoading} type="submit">
+        {submit.label}
       </Button>
     </form>
   );

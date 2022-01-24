@@ -29,7 +29,7 @@ const Toggle = () => {
 };
 
 const common =
-  " mt-2 mr-1 text-coolGray-800 dark:text-white dark:hover:text-sky-500 cursor-pointer transition duration-500 ease-in-out hover:text-sky-500";
+  " mt-2 mr-1 text-coolGray-800 dark:text-white dark:hover:text-primary cursor-pointer transition duration-500 ease-in-out hover:text-primary-300";
 export default () => (
   <div className={common}>
     <Toggle />

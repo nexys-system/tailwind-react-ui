@@ -1,12 +1,12 @@
-import { contextBgColors, contextTextColors } from "../type";
+import { contextBdRadius, contextBgColors, contextTextColors } from "../type";
 import { Theme } from "../../context-provider/theme/type";
 import { ButtonStyle } from "./type";
 
 const classTransitions =
-  "transition-all duration-500 ease-in-out hover:brightness-150 transform hover:-translate-y-1 hover:scale-110";
+  "transition-all duration-500 ease-in-out hover:brightness-150 transform hover:-translate-y-1 hover:scale-105";
 
 export const get = (
-  { variant, color, textColor }: ButtonStyle,
+  { variant, color, textColor, rounded }: ButtonStyle,
   disabled: boolean = false,
   isLoading?: boolean,
   theme: Theme = "light"
@@ -17,7 +17,7 @@ export const get = (
   const shade = 500;
 
   const classArray: string[] = [
-    "rounded-full",
+    rounded ? contextBdRadius[rounded] : "rounded-button",
     `m-3 pl-5 pr-5 pt-2 pb-2 ${
       variant === "filled" ? textColorClass : contextTextColors[color]
     } border-none`,
@@ -26,13 +26,13 @@ export const get = (
 
   if (variant === "filled") {
     classArray.push(
-      `${bgColor} hover:${bgColor}-400` //dark:bg-${color}-${shade < 900 ? shade + 100 : shade}`
+      `shadow ${bgColor} hover:${bgColor}-400` //dark:bg-${color}-${shade < 900 ? shade + 100 : shade}`
     );
 
     if (!disabled && !isLoading) {
       classArray.push(
         theme === "dark"
-          ? "hover:shadow-primary"
+          ? "hover:shadow"
           : "shadow-sm focus:shadow-md hover:shadow-lg"
       );
     }

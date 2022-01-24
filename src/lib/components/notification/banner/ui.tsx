@@ -19,7 +19,7 @@ export default ({
   onDismiss = () => alert("initialize onDismiss event"),
   Icon = () => <SpeakerphoneIcon />,
   isHtml,
-  color = "sky",
+  color = "primary",
 }: BannerProps) => {
   return (
     <div className={`bg-${color}-500`}>

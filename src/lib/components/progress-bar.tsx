@@ -4,7 +4,7 @@ export default (props: { progress: number }) => {
   const { progress } = props;
   return (
     <div className="relative pt-1">
-      <div className="overflow-hidden h-2 mb-4 text-xs flex  bg-sky-200 shadow-md">
+      <div className="overflow-hidden h-2 mb-4 text-xs flex  bg-primary-200 shadow-md">
         <div
           style={{
             width: `${progress}%`,

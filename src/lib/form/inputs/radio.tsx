@@ -26,17 +26,6 @@ export default ({
     }
   }
   return (
-    // <label className="flex radio p-2 cursor-pointer">
-    //   <input
-    //     className="form-radio h-5 w-5 text-sky-500 bg-sky-500"
-    //     type="radio"
-    //     name={`radio-${id}`}
-    //     onChange={() => onChange(id)}
-    //     checked={checked}
-    //   />
-    //   <span className="title px-2 cursor-pointer font-extralight">{label}</span>
-    // </label>
-
     <div className="flex items-center mr-4 mb-4">
       <input
         id={`radio-${id}`}

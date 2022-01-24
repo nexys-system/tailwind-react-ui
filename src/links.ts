@@ -27,9 +27,15 @@ import List from "./app/components/list";
 import Detail from "./app/components/detail";
 import Crud from "./app/components/crud";
 import Misc from "./app/components/misc";
+import Modal from "./app/components/modal";
+import Link from "./app/components/link";
+// import Stepper from "./app/components/stepper";
 
 import Snippet from "./app/components/snippet";
 import ContextNotification from "./app/components/context/notification";
+
+import Color from "./app/general/color";
+import Border from "./app/general/border-radius";
 
 import FormWrapper from "./app/form/wrapper";
 
@@ -51,24 +57,33 @@ export const components: (MenuItem & {
   { name: "Badge", link: "/badge", Component: Badge },
   { name: "Card", link: "/card", Component: Card },
   { name: "Code", link: "/code", Component: Code },
+  { name: "Dropdowns", link: "/dropdown", Component: Dropdowns },
+  { name: "Modal", link: "/modal", Component: Modal },
+  { name: "Icons", link: "/icons", Component: Icons },
+  { name: "Pill", link: "/pill", Component: Pill },
+  { name: "Spinners", link: "/spinner", Component: Spinner },
+  { name: "Typography", link: "/typography", Component: Typography },
+  { name: "Snippets", link: "/snippets", Component: Snippet },
+  { name: "Misc", link: "/misc", Component: Misc },
+  { name: "Links", link: "/link", Component: Link },
+  { name: "Context", link: "/context", Component: ContextNotification },
+  // { name: "Stepper", link: "/stepper", Component: Stepper },
+];
+
+export const crud: (MenuItem & {
+  Component: () => JSX.Element;
+  exact?: boolean;
+})[] = [
   { name: "Crud", link: "/crud", exact: false, Component: Crud },
   { name: "Data Load", link: "/data-load", Component: DataLoad },
   { name: "Delete", link: "/delete", Component: DeleteRedirect },
   { name: "Detail", link: "/detail", Component: Detail },
-  { name: "Dropdowns", link: "/dropdown", Component: Dropdowns },
   { name: "Edit", link: "/edit", Component: Edit },
-  { name: "Icons", link: "/icons", Component: Icons },
   { name: "List", link: "/list", Component: List },
-  { name: "Pill", link: "/pill", Component: Pill },
-  { name: "Spinners", link: "/spinner", Component: Spinner },
   { name: "Table", link: "/table", Component: Table },
   { name: "Tabs", link: "/tabs", exact: false, Component: Tabs },
   { name: "Toggle", link: "/toggle", Component: Toggle },
-  { name: "Typography", link: "/typography", Component: Typography },
   { name: "View", link: "/view", Component: View },
-  { name: "Snippets", link: "/snippets", Component: Snippet },
-  { name: "Misc", link: "/misc", Component: Misc },
-  { name: "Context", link: "/context", Component: ContextNotification },
 ];
 
 export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
@@ -81,6 +96,11 @@ export const formComponents: (MenuItem & { Component: () => JSX.Element })[] = [
   { name: "Form Generator", link: "/form-generator", Component: FormGenerator },
   { name: "Textarea", link: "/textarea", Component: TextareaInput },
   { name: "Wrapper", link: "/wrapper", Component: FormWrapper },
+];
+
+export const specs: (MenuItem & { Component: () => JSX.Element })[] = [
+  { name: "Color", link: "/color", Component: Color },
+  { name: "Border Radius", link: "/radius", Component: Border },
 ];
 
 export const menus: MenuItem[] = Object.values(links);

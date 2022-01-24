@@ -52,4 +52,12 @@ export const Statement = ({
   );
 };
 
+export const Block = ({ code }: { code: string }) => {
+  return (
+    <code className="block whitespace-pre overflow-x-scroll cursor-pointer rounded p-1 pb-1 px-3 text-sm text-gray-800 hover:text-gray-700 bg-gray-100">
+      {code}
+    </code>
+  );
+};
+
 // mb-1 mb-2 mb-3 mb-4

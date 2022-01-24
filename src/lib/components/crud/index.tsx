@@ -5,7 +5,7 @@ import { ViewField } from "@nexys/react-bootstrap/dist/headless/view/type";
 
 import ListInner from "../list";
 import DetailGeneric from "../detail/index";
-import { FormWDef } from "../form/generic/generator/index";
+import { FormWDef } from "../../form/generic-2/generator/index";
 
 import * as CrudGeneric from "@nexys/react-bootstrap/dist/headless/crud";
 import {
